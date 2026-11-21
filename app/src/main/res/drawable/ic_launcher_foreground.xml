@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A tilted screen being straightened: skewed outline behind a clean upright rectangle. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+    <path android:strokeColor="#80FFFFFF" android:strokeWidth="2.5" android:fillColor="#00000000"
+        android:pathData="M30,40 L74,34 L78,70 L32,74 Z" />
+    <path android:fillColor="#FFFFFF" android:pathData="M36,42 L72,42 L72,66 L36,66 Z" />
+    <path android:fillColor="#1E4FD8" android:pathData="M40,48 L64,48 L64,51 L40,51 Z M40,54 L68,54 L68,57 L40,57 Z M40,60 L58,60 L58,63 L40,63 Z" />
+</vector>

@@ -1,0 +1,235 @@
+# Sample credits
+
+Images from Wikimedia Commons, downloaded for local testing only (not committed).
+
+- screen: [File:Laptop with external screen 2026 jeh.jpg](https://commons.wikimedia.org/wiki/File:Laptop_with_external_screen_2026_jeh.jpg) — CC BY-SA 4.0
+- screen: [File:Nikiski Concept Laptop (2).jpg](https://commons.wikimedia.org/wiki/File:Nikiski_Concept_Laptop_(2).jpg) — CC BY 2.0
+- screen: [File:Pixel Qi screen installed in a Toshiba laptop.jpg](https://commons.wikimedia.org/wiki/File:Pixel_Qi_screen_installed_in_a_Toshiba_laptop.jpg) — CC BY-SA 2.0
+- screen: [File:S112E05052 - STS-112 - Laptop screen with rendezvous data - DPLA - e53ae5fc25209a17fba35ee98550e6ef.jpg](https://commons.wikimedia.org/wiki/File:S112E05052_-_STS-112_-_Laptop_screen_with_rendezvous_data_-_DPLA_-_e53ae5fc25209a17fba35ee98550e6ef.jpg) — Public domain
+- screen: [File:Schenker VIA14 Laptop asv2021-01.jpg](https://commons.wikimedia.org/wiki/File:Schenker_VIA14_Laptop_asv2021-01.jpg) — FAL
+- screen: [File:Touch Experience on Laptop Screens.jpg](https://commons.wikimedia.org/wiki/File:Touch_Experience_on_Laptop_Screens.jpg) — CC BY 2.0
+- screen: [File:Touch on Laptop Screens.jpg](https://commons.wikimedia.org/wiki/File:Touch_on_Laptop_Screens.jpg) — CC BY 2.0
+- screen: [File:Computer monitor screen image simulated.jpg](https://commons.wikimedia.org/wiki/File:Computer_monitor_screen_image_simulated.jpg) — CC BY-SA 3.0
+- screen: [File:NEC MONITOR E2206XG.jpg](https://commons.wikimedia.org/wiki/File:NEC_MONITOR_E2206XG.jpg) — CC BY-SA 4.0
+- screen: [File:Emirates A380 seat-back screen with tail camera.jpg](https://commons.wikimedia.org/wiki/File:Emirates_A380_seat-back_screen_with_tail_camera.jpg) — CC BY-SA 3.0
+- screen: [File:LG Smart TV web browser.jpg](https://commons.wikimedia.org/wiki/File:LG_Smart_TV_web_browser.jpg) — Public domain
+- screen: [File:Personal screen in Emirates' A380.jpg](https://commons.wikimedia.org/wiki/File:Personal_screen_in_Emirates'_A380.jpg) — CC BY-SA 3.0
+- screen: [File:RTL8 Ondertiteling voor dozen en slechthorenden is te vinden op 888, Winschoten (2021).jpg](https://commons.wikimedia.org/wiki/File:RTL8_Ondertiteling_voor_dozen_en_slechthorenden_is_te_vinden_op_888,_Winschoten_(2021).jpg) — CC BY-SA 4.0
+- screen: [File:Sony Internet TV BestBuy jeh.jpg](https://commons.wikimedia.org/wiki/File:Sony_Internet_TV_BestBuy_jeh.jpg) — CC0
+- screen: [File:TV showing linux booting on a xbox.JPG](https://commons.wikimedia.org/wiki/File:TV_showing_linux_booting_on_a_xbox.JPG) — CC BY 2.5
+- screen: [File:Screen showing Executive Committee Meeting in progress (iauga15-d1-18).jpg](https://commons.wikimedia.org/wiki/File:Screen_showing_Executive_Committee_Meeting_in_progress_(iauga15-d1-18).jpg) — CC BY 4.0
+- screen: [File:ASUS PB278Q (PXL 20250914 223256075).jpg](https://commons.wikimedia.org/wiki/File:ASUS_PB278Q_(PXL_20250914_223256075).jpg) — CC BY 4.0
+- screen: [File:Laptop computer.jpeg](https://commons.wikimedia.org/wiki/File:Laptop_computer.jpeg) — CC BY-SA 4.0
+- screen: [File:MSI laptop with English Wikipedia screenshot 20100614.jpg](https://commons.wikimedia.org/wiki/File:MSI_laptop_with_English_Wikipedia_screenshot_20100614.jpg) — CC BY-SA 4.0
+- screen: [File:MSI laptop with English Wikipedia screenshot 20100614 (2).jpg](https://commons.wikimedia.org/wiki/File:MSI_laptop_with_English_Wikipedia_screenshot_20100614_(2).jpg) — CC BY-SA 4.0
+- document: [File:New Taxi Fare Table for Greater Taipei area effective from 2015-10-01 printed by Keelung City Government.jpg](https://commons.wikimedia.org/wiki/File:New_Taxi_Fare_Table_for_Greater_Taipei_area_effective_from_2015-10-01_printed_by_Keelung_City_Government.jpg) — Public domain
+- document: [File:HK SSP 深水埗 Sham Shui Po 鴨寮街 Apliu Street stationer receipt book July 2023 Px3.jpg](https://commons.wikimedia.org/wiki/File:HK_SSP_深水埗_Sham_Shui_Po_鴨寮街_Apliu_Street_stationer_receipt_book_July_2023_Px3.jpg) — CC BY-SA 4.0
+- document: [File:HK SYP 西環 Sai Ying Pun 德輔道西 308 Des Voeux Road West 食神麗宮酒家 Chinese Banquet Seafood Restaurant bill receipt January 2026 N13P 02.jpg](https://commons.wikimedia.org/wiki/File:HK_SYP_西環_Sai_Ying_Pun_德輔道西_308_Des_Voeux_Road_West_食神麗宮酒家_Chinese_Banquet_Seafood_Restaurant_bill_receipt_January_2026_N13P_02.jpg) — CC0
+- document: [File:HK Sheung Wan 喜悅海鮮酒家 Hei Yuet Seafood Restaurant Official Receipt in pink Paid chop print May-2010.jpg](https://commons.wikimedia.org/wiki/File:HK_Sheung_Wan_喜悅海鮮酒家_Hei_Yuet_Seafood_Restaurant_Official_Receipt_in_pink_Paid_chop_print_May-2010.jpg) — CC BY-SA 3.0
+- document: [File:HK TKO 將軍澳 Tseung Kwan O 坑口 Hang Hau 南豐廣場 Nan Fung Plaza shop 稻香超級漁港 Tao Heung Chinese Restaurant diner paper billl receipt October 2026 N13P.jpg](https://commons.wikimedia.org/wiki/File:HK_TKO_將軍澳_Tseung_Kwan_O_坑口_Hang_Hau_南豐廣場_Nan_Fung_Plaza_shop_稻香超級漁港_Tao_Heung_Chinese_Restaurant_diner_paper_billl_receipt_October_2026_N13P.jpg) — CC0
+- document: [File:Papyrus Berlin 8011 (paper) (front).jpg](https://commons.wikimedia.org/wiki/File:Papyrus_Berlin_8011_(paper)_(front).jpg) — Public domain
+- document: [File:Print, receipt, map (BM D,3.466).jpg](https://commons.wikimedia.org/wiki/File:Print,_receipt,_map_(BM_D,3.466).jpg) — Public domain
+- document: [File:Subscription Receipt with Traditional Characters from the Philippines.jpg](https://commons.wikimedia.org/wiki/File:Subscription_Receipt_with_Traditional_Characters_from_the_Philippines.jpg) — CC BY-SA 4.0
+- document: [File:Bird Feather Feather Paper pen Bird feather made into dipping pen, inkwell, paper, handwritten letter, inkblots, etc. 2505306 Edited 2020.jpg](https://commons.wikimedia.org/wiki/File:Bird_Feather_Feather_Paper_pen_Bird_feather_made_into_dipping_pen,_inkwell,_paper,_handwritten_letter,_inkblots,_etc._2505306_Edited_2020.jpg) — CC BY 2.0
+- document: [File:HK 調景嶺 Tiu Keng Leng 都會駅 Metro Town Shopping Mall shop 豪宴海鮮酒家 Ho Yin Seafood Restaurant printed paper document October 2021 SS2 dim sum delivered form 01.jpg](https://commons.wikimedia.org/wiki/File:HK_調景嶺_Tiu_Keng_Leng_都會駅_Metro_Town_Shopping_Mall_shop_豪宴海鮮酒家_Ho_Yin_Seafood_Restaurant_printed_paper_document_October_2021_SS2_dim_sum_delivered_form_01.jpg) — CC BY-SA 4.0
+- document: [File:HK 調景嶺 Tiu Keng Leng 都會駅 Metro Town Shopping Mall shop 豪宴海鮮酒家 Ho Yin Seafood Restaurant printed paper document October 2021 SS2 dim sum delivered form 02.jpg](https://commons.wikimedia.org/wiki/File:HK_調景嶺_Tiu_Keng_Leng_都會駅_Metro_Town_Shopping_Mall_shop_豪宴海鮮酒家_Ho_Yin_Seafood_Restaurant_printed_paper_document_October_2021_SS2_dim_sum_delivered_form_02.jpg) — CC BY-SA 4.0
+- document: [File:HK 調景嶺 Tiu Keng Leng 都會駅 Metro Town Shopping Mall shop 豪宴海鮮酒家 Ho Yin Seafood Restaurant printed paper document October 2021 SS2 dim sum delivered form back.jpg](https://commons.wikimedia.org/wiki/File:HK_調景嶺_Tiu_Keng_Leng_都會駅_Metro_Town_Shopping_Mall_shop_豪宴海鮮酒家_Ho_Yin_Seafood_Restaurant_printed_paper_document_October_2021_SS2_dim_sum_delivered_form_back.jpg) — CC BY-SA 4.0
+- document: [File:HK 調景嶺 Tiu Keng Leng 都會駅 Metro Town Shopping Mall shop 豪宴海鮮酒家 Ho Yin Seafood Restaurant printed paper document October 2021 SS2 dim sum delivered form signed.jpg](https://commons.wikimedia.org/wiki/File:HK_調景嶺_Tiu_Keng_Leng_都會駅_Metro_Town_Shopping_Mall_shop_豪宴海鮮酒家_Ho_Yin_Seafood_Restaurant_printed_paper_document_October_2021_SS2_dim_sum_delivered_form_signed.jpg) — CC BY-SA 4.0
+- document: [File:2025.02.08 Flea Market Izmailovo – Paper Restaurant Menu 21.11.1911 Russian Empire.jpg](https://commons.wikimedia.org/wiki/File:2025.02.08_Flea_Market_Izmailovo_–_Paper_Restaurant_Menu_21.11.1911_Russian_Empire.jpg) — CC BY-SA 4.0
+- document: [File:HK TKO 將軍澳南 Tseung Kwan O South 唐俊街 21 Tong Chun Street 海翩滙 Papillons Square shop 海港酒家 Victoria Harbour Seafood Restaurant menu n paper document October 2021 SS2 01.jpg](https://commons.wikimedia.org/wiki/File:HK_TKO_將軍澳南_Tseung_Kwan_O_South_唐俊街_21_Tong_Chun_Street_海翩滙_Papillons_Square_shop_海港酒家_Victoria_Harbour_Seafood_Restaurant_menu_n_paper_document_October_2021_SS2_01.jpg) — CC BY-SA 4.0
+- document: [File:HK TKO 將軍澳南 Tseung Kwan O South 唐俊街 21 Tong Chun Street 海翩滙 Papillons Square shop 海港酒家 Victoria Harbour Seafood Restaurant menu n paper document October 2021 SS2 02.jpg](https://commons.wikimedia.org/wiki/File:HK_TKO_將軍澳南_Tseung_Kwan_O_South_唐俊街_21_Tong_Chun_Street_海翩滙_Papillons_Square_shop_海港酒家_Victoria_Harbour_Seafood_Restaurant_menu_n_paper_document_October_2021_SS2_02.jpg) — CC BY-SA 4.0
+- document: [File:HK TKO 將軍澳南 Tseung Kwan O South 唐俊街 21 Tong Chun Street 海翩滙 Papillons Square shop 海港酒家 Victoria Harbour Seafood Restaurant menu n paper document October 2021 SS2 03.jpg](https://commons.wikimedia.org/wiki/File:HK_TKO_將軍澳南_Tseung_Kwan_O_South_唐俊街_21_Tong_Chun_Street_海翩滙_Papillons_Square_shop_海港酒家_Victoria_Harbour_Seafood_Restaurant_menu_n_paper_document_October_2021_SS2_03.jpg) — CC BY-SA 4.0
+- document: [File:HK TKO 將軍澳南 Tseung Kwan O South 唐俊街 21 Tong Chun Street 海翩滙 Papillons Square shop 海港酒家 Victoria Harbour Seafood Restaurant menu n paper document October 2021 SS2 04.jpg](https://commons.wikimedia.org/wiki/File:HK_TKO_將軍澳南_Tseung_Kwan_O_South_唐俊街_21_Tong_Chun_Street_海翩滙_Papillons_Square_shop_海港酒家_Victoria_Harbour_Seafood_Restaurant_menu_n_paper_document_October_2021_SS2_04.jpg) — CC BY-SA 4.0
+- document: [File:HK TKO 將軍澳南 Tseung Kwan O South 唐俊街 21 Tong Chun Street 海翩滙 Papillons Square shop 海港酒家 Victoria Harbour Seafood Restaurant menu n paper document October 2021 SS2 05.jpg](https://commons.wikimedia.org/wiki/File:HK_TKO_將軍澳南_Tseung_Kwan_O_South_唐俊街_21_Tong_Chun_Street_海翩滙_Papillons_Square_shop_海港酒家_Victoria_Harbour_Seafood_Restaurant_menu_n_paper_document_October_2021_SS2_05.jpg) — CC BY-SA 4.0
+- document: [File:HK TKO 將軍澳南 Tseung Kwan O South 唐俊街 21 Tong Chun Street 海翩滙 Papillons Square shop 海港酒家 Victoria Harbour Seafood Restaurant menu n paper document October 2021 SS2 06.jpg](https://commons.wikimedia.org/wiki/File:HK_TKO_將軍澳南_Tseung_Kwan_O_South_唐俊街_21_Tong_Chun_Street_海翩滙_Papillons_Square_shop_海港酒家_Victoria_Harbour_Seafood_Restaurant_menu_n_paper_document_October_2021_SS2_06.jpg) — CC BY-SA 4.0
+- document: [File:HK TKO 將軍澳南 Tseung Kwan O South 唐俊街 21 Tong Chun Street 海翩滙 Papillons Square shop 海港酒家 Victoria Harbour Seafood Restaurant menu n paper document October 2021 SS2 07.jpg](https://commons.wikimedia.org/wiki/File:HK_TKO_將軍澳南_Tseung_Kwan_O_South_唐俊街_21_Tong_Chun_Street_海翩滙_Papillons_Square_shop_海港酒家_Victoria_Harbour_Seafood_Restaurant_menu_n_paper_document_October_2021_SS2_07.jpg) — CC BY-SA 4.0
+- document: [File:HK TKO 將軍澳南 Tseung Kwan O South 唐俊街 21 Tong Chun Street 海翩滙 Papillons Square shop 海港酒家 Victoria Harbour Seafood Restaurant menu n paper document QR code October 2021 SS2 01.jpg](https://commons.wikimedia.org/wiki/File:HK_TKO_將軍澳南_Tseung_Kwan_O_South_唐俊街_21_Tong_Chun_Street_海翩滙_Papillons_Square_shop_海港酒家_Victoria_Harbour_Seafood_Restaurant_menu_n_paper_document_QR_code_October_2021_SS2_01.jpg) — CC BY-SA 4.0
+- document: [File:HK TKO 將軍澳南 Tseung Kwan O South 唐俊街 21 Tong Chun Street 海翩滙 Papillons Square shop 海港酒家 Victoria Harbour Seafood Restaurant menu n paper document QR code October 2021 SS2 02.jpg](https://commons.wikimedia.org/wiki/File:HK_TKO_將軍澳南_Tseung_Kwan_O_South_唐俊街_21_Tong_Chun_Street_海翩滙_Papillons_Square_shop_海港酒家_Victoria_Harbour_Seafood_Restaurant_menu_n_paper_document_QR_code_October_2021_SS2_02.jpg) — CC BY-SA 4.0
+- document: [File:HK YTM 佐敦道 39 Jordan Road 根德大廈 Kent Building 安園餐廳 On Yuen Restaurant menu January 2026 N13P 02.jpg](https://commons.wikimedia.org/wiki/File:HK_YTM_佐敦道_39_Jordan_Road_根德大廈_Kent_Building_安園餐廳_On_Yuen_Restaurant_menu_January_2026_N13P_02.jpg) — CC0
+- document: [File:HK YTM 佐敦道 39 Jordan Road 根德大廈 Kent Building 安園餐廳 On Yuen Restaurant menu January 2026 N13P 03.jpg](https://commons.wikimedia.org/wiki/File:HK_YTM_佐敦道_39_Jordan_Road_根德大廈_Kent_Building_安園餐廳_On_Yuen_Restaurant_menu_January_2026_N13P_03.jpg) — CC0
+- document: [File:JP 日本 Japan 沖繩 OKINAWA 那霸 Naha 魚屋海鮮 Izakaya 居酒屋食堂 Japanese seafood restaurant menu February 2026 N13P 01.jpg](https://commons.wikimedia.org/wiki/File:JP_日本_Japan_沖繩_OKINAWA_那霸_Naha_魚屋海鮮_Izakaya_居酒屋食堂_Japanese_seafood_restaurant_menu_February_2026_N13P_01.jpg) — CC0
+- document: [File:Animate Taiwan uniform invoice RD52674989.jpg](https://commons.wikimedia.org/wiki/File:Animate_Taiwan_uniform_invoice_RD52674989.jpg) — CC BY-SA 4.0
+- document: [File:Bafang Yunji NCCU Store uniform invoice VP47934675.jpg](https://commons.wikimedia.org/wiki/File:Bafang_Yunji_NCCU_Store_uniform_invoice_VP47934675.jpg) — CC BY-SA 4.0
+- document: [File:Global Mall Banciao uniform invoice MC95103860.jpg](https://commons.wikimedia.org/wiki/File:Global_Mall_Banciao_uniform_invoice_MC95103860.jpg) — CC BY-SA 3.0
+- document: [File:KFC Keelung Ren 1st Restaurant uniform invoice 20150701.jpg](https://commons.wikimedia.org/wiki/File:KFC_Keelung_Ren_1st_Restaurant_uniform_invoice_20150701.jpg) — CC BY-SA 4.0
+- other: [File:Brooklyn Diner, New York City (2024)-L1006207.jpg](https://commons.wikimedia.org/wiki/File:Brooklyn_Diner,_New_York_City_(2024)-L1006207.jpg) — CC BY-SA 4.0
+- other: [File:Central Park New York City New York 23 cropped.jpg](https://commons.wikimedia.org/wiki/File:Central_Park_New_York_City_New_York_23_cropped.jpg) — Public domain
+- other: [File:Chateau Frontenac at dusk in Quebec City.jpg](https://commons.wikimedia.org/wiki/File:Chateau_Frontenac_at_dusk_in_Quebec_City.jpg) — CC0
+- other: [File:Château Frontenac after a freezing rain day in Quebec city.jpg](https://commons.wikimedia.org/wiki/File:Château_Frontenac_after_a_freezing_rain_day_in_Quebec_city.jpg) — CC BY-SA 4.0
+- other: [File:Château Frontenac city at night.jpg](https://commons.wikimedia.org/wiki/File:Château_Frontenac_city_at_night.jpg) — CC BY-SA 4.0
+- other: [File:Château Frontenac in Quebec city, Canada colorfull.jpg](https://commons.wikimedia.org/wiki/File:Château_Frontenac_in_Quebec_city,_Canada_colorfull.jpg) — CC0
+- other: [File:Dura-Europos archival photograph, YUAG negative number dura-d114~01 -object-id-14620.jpg](https://commons.wikimedia.org/wiki/File:Dura-Europos_archival_photograph,_YUAG_negative_number_dura-d114~01_-object-id-14620.jpg) — CC0
+- other: [File:Eldridge Street Synagogue (42773).jpg](https://commons.wikimedia.org/wiki/File:Eldridge_Street_Synagogue_(42773).jpg) — CC BY-SA 4.0
+- other: [File:FEMA - 5399 - Photograph by Andrea Booher taken on 09-28-2001 in New York.jpg](https://commons.wikimedia.org/wiki/File:FEMA_-_5399_-_Photograph_by_Andrea_Booher_taken_on_09-28-2001_in_New_York.jpg) — Public domain
+- other: [File:Gare fluviale de Québec, Quebec city, Canada.jpg](https://commons.wikimedia.org/wiki/File:Gare_fluviale_de_Québec,_Quebec_city,_Canada.jpg) — CC0
+- other: [File:Homeless on Paulista Avenue, São Paulo city, Brazil.jpg](https://commons.wikimedia.org/wiki/File:Homeless_on_Paulista_Avenue,_São_Paulo_city,_Brazil.jpg) — CC BY-SA 4.0
+- other: [File:Lower Manhattan from Jersey City September 2020 panorama.jpg](https://commons.wikimedia.org/wiki/File:Lower_Manhattan_from_Jersey_City_September_2020_panorama.jpg) — CC BY-SA 4.0
+- other: [File:Mulberry Street NYC c1900 LOC 3g04637u edit.jpg](https://commons.wikimedia.org/wiki/File:Mulberry_Street_NYC_c1900_LOC_3g04637u_edit.jpg) — Public domain
+- other: [File:NYC Mulberry Street 3g04637u.jpg](https://commons.wikimedia.org/wiki/File:NYC_Mulberry_Street_3g04637u.jpg) — Public domain
+- other: [File:Québec city at night, view from Lévis city.jpg](https://commons.wikimedia.org/wiki/File:Québec_city_at_night,_view_from_Lévis_city.jpg) — CC BY-SA 4.0
+- other: [File:Québec city downtown.jpg](https://commons.wikimedia.org/wiki/File:Québec_city_downtown.jpg) — CC BY-SA 4.0
+- other: [File:Skylight in the abandoned City Hall Station (32155).jpg](https://commons.wikimedia.org/wiki/File:Skylight_in_the_abandoned_City_Hall_Station_(32155).jpg) — CC BY-SA 4.0
+- other: [File:Snow-covered Quebec City skyline in fog.jpg](https://commons.wikimedia.org/wiki/File:Snow-covered_Quebec_City_skyline_in_fog.jpg) — CC0
+- other: [File:Snowy Sainte-Famille Street in Quebec City.jpg](https://commons.wikimedia.org/wiki/File:Snowy_Sainte-Famille_Street_in_Quebec_City.jpg) — CC0
+- other: [File:Wolfe City October 2015 05 (Main Street).jpg](https://commons.wikimedia.org/wiki/File:Wolfe_City_October_2015_05_(Main_Street).jpg) — CC BY-SA 4.0
+- other: [File:Anza-Borrego Desert State Park landscape - 2022-12.jpg](https://commons.wikimedia.org/wiki/File:Anza-Borrego_Desert_State_Park_landscape_-_2022-12.jpg) — CC BY 2.0
+- other: [File:Blue Mountains National Park (AU), Three Sisters -- 2019 -- 1987-9.jpg](https://commons.wikimedia.org/wiki/File:Blue_Mountains_National_Park_(AU),_Three_Sisters_--_2019_--_1987-9.jpg) — CC BY-SA 4.0
+- other: [File:Ergaki, Mountain lake Skazka, Rock formations, Sayan Mountains, Russia.jpg](https://commons.wikimedia.org/wiki/File:Ergaki,_Mountain_lake_Skazka,_Rock_formations,_Sayan_Mountains,_Russia.jpg) — CC BY 4.0
+- other: [File:Ergaki, Peak Molodezhnyy, Sayan Mountains, Russia.jpg](https://commons.wikimedia.org/wiki/File:Ergaki,_Peak_Molodezhnyy,_Sayan_Mountains,_Russia.jpg) — CC BY 4.0
+- other: [File:Field, corn, Liechtenstein, Mountains, Alps, Vaduz, sky, clouds, landscape.jpg](https://commons.wikimedia.org/wiki/File:Field,_corn,_Liechtenstein,_Mountains,_Alps,_Vaduz,_sky,_clouds,_landscape.jpg) — Public domain
+- other: [File:Fields Hazy Mountains Marlimund Ooty Nilgiris Aug25 A7CR 07258.jpg](https://commons.wikimedia.org/wiki/File:Fields_Hazy_Mountains_Marlimund_Ooty_Nilgiris_Aug25_A7CR_07258.jpg) — CC BY-SA 4.0
+- other: [File:Kokkozka Valley, Belbek Valley, Crimean Mountains, Crimea.jpg](https://commons.wikimedia.org/wiki/File:Kokkozka_Valley,_Belbek_Valley,_Crimean_Mountains,_Crimea.jpg) — CC BY 4.0
+- other: [File:Landscape Arnisee-region.JPG](https://commons.wikimedia.org/wiki/File:Landscape_Arnisee-region.JPG) — CC BY-SA 2.5
+- other: [File:Landscape with mountains, green paddy fields and bamboo footbridge, in the evening, in Vang Vieng.jpg](https://commons.wikimedia.org/wiki/File:Landscape_with_mountains,_green_paddy_fields_and_bamboo_footbridge,_in_the_evening,_in_Vang_Vieng.jpg) — CC BY-SA 4.0
+- other: [File:Mountain landscape, Weathering and erosion in glacial valley, Ergaki, Sayan Mountains, Siberia.jpg](https://commons.wikimedia.org/wiki/File:Mountain_landscape,_Weathering_and_erosion_in_glacial_valley,_Ergaki,_Sayan_Mountains,_Siberia.jpg) — CC BY 4.0
+- other: [File:Mountains in snow, Mountain lake, Chola Valley, Nepal, Himalayas.jpg](https://commons.wikimedia.org/wiki/File:Mountains_in_snow,_Mountain_lake,_Chola_Valley,_Nepal,_Himalayas.jpg) — CC BY 4.0
+- other: [File:Semi-desert landscape in the mountains of Russian Altai.jpg](https://commons.wikimedia.org/wiki/File:Semi-desert_landscape_in_the_mountains_of_Russian_Altai.jpg) — CC BY-SA 4.0
+- other: [File:Shila Tsarap Mountains Zanskar Oct22 A7C 04113.jpg](https://commons.wikimedia.org/wiki/File:Shila_Tsarap_Mountains_Zanskar_Oct22_A7C_04113.jpg) — CC BY-SA 4.0
+- other: [File:Sunlight and stormy sky over the mountains and paddy fields in Vang Vieng, Laos.jpg](https://commons.wikimedia.org/wiki/File:Sunlight_and_stormy_sky_over_the_mountains_and_paddy_fields_in_Vang_Vieng,_Laos.jpg) — CC BY-SA 4.0
+- other: [File:Vihren & Kutelo Pirin Mountains Bulgaria 2025.jpg](https://commons.wikimedia.org/wiki/File:Vihren_&_Kutelo_Pirin_Mountains_Bulgaria_2025.jpg) — CC BY-SA 4.0
+- other: [File:Water reflection of karst mountains at golden hour in Vang Vieng Laos (panoramic).jpg](https://commons.wikimedia.org/wiki/File:Water_reflection_of_karst_mountains_at_golden_hour_in_Vang_Vieng_Laos_(panoramic).jpg) — CC BY-SA 4.0
+- other: [File:Water reflection of the mountains of Vang Vieng with crepuscular rays.jpg](https://commons.wikimedia.org/wiki/File:Water_reflection_of_the_mountains_of_Vang_Vieng_with_crepuscular_rays.jpg) — CC BY-SA 4.0
+- other: [File:Winter in Tatry Mountains - Poland.jpg](https://commons.wikimedia.org/wiki/File:Winter_in_Tatry_Mountains_-_Poland.jpg) — CC BY 4.0
+- other: [File:Zagedan Lakes, Mountain cirque, Caucasus Mountains.jpg](https://commons.wikimedia.org/wiki/File:Zagedan_Lakes,_Mountain_cirque,_Caucasus_Mountains.jpg) — CC BY 4.0
+- other: [File:Zagedan Ridge, Zagedan Valley, Caucasus Mountains, Karachay-Cherkessia.jpg](https://commons.wikimedia.org/wiki/File:Zagedan_Ridge,_Zagedan_Valley,_Caucasus_Mountains,_Karachay-Cherkessia.jpg) — CC BY 4.0
+- other: [File:Banknote portrait pattern (Intaglio print, tactile effect).jpg](https://commons.wikimedia.org/wiki/File:Banknote_portrait_pattern_(Intaglio_print,_tactile_effect).jpg) — Hungarian banknote
+- other: [File:Dama z gronostajem.jpg](https://commons.wikimedia.org/wiki/File:Dama_z_gronostajem.jpg) — Public domain
+- other: [File:Donald Trump official portrait.jpg](https://commons.wikimedia.org/wiki/File:Donald_Trump_official_portrait.jpg) — Public domain
+- other: [File:Double portrait, yard, man, woman, man and woman, old person Fortepan 8247.jpg](https://commons.wikimedia.org/wiki/File:Double_portrait,_yard,_man,_woman,_man_and_woman,_old_person_Fortepan_8247.jpg) — Public domain
+- other: [File:Helene Schjerfbeck, Self-Portrait, Black Background, 1915.jpg](https://commons.wikimedia.org/wiki/File:Helene_Schjerfbeck,_Self-Portrait,_Black_Background,_1915.jpg) — Public domain
+- other: [File:John F Kennedy Official Portrait.jpg](https://commons.wikimedia.org/wiki/File:John_F_Kennedy_Official_Portrait.jpg) — Public domain
+- other: [File:Official portrait of Barack Obama.jpg](https://commons.wikimedia.org/wiki/File:Official_portrait_of_Barack_Obama.jpg) — CC BY 3.0
+- other: [File:Portrait of a Carpathian Lynx.jpg](https://commons.wikimedia.org/wiki/File:Portrait_of_a_Carpathian_Lynx.jpg) — CC0
+- other: [File:Portrait of a Man, Said to be Christopher Columbus.jpg](https://commons.wikimedia.org/wiki/File:Portrait_of_a_Man,_Said_to_be_Christopher_Columbus.jpg) — Public domain
+- other: [File:Portrait of a Tunisian Woman from Djerid.jpg](https://commons.wikimedia.org/wiki/File:Portrait_of_a_Tunisian_Woman_from_Djerid.jpg) — CC BY-SA 4.0
+- other: [File:Portrait of a Woman MET DP162139.jpg](https://commons.wikimedia.org/wiki/File:Portrait_of_a_Woman_MET_DP162139.jpg) — CC0
+- other: [File:Portrait of a Woman MET SLP0129.jpg](https://commons.wikimedia.org/wiki/File:Portrait_of_a_Woman_MET_SLP0129.jpg) — CC0
+- other: [File:President Barack Obama.jpg](https://commons.wikimedia.org/wiki/File:President_Barack_Obama.jpg) — Public domain
+- other: [File:Topless female model.jpg](https://commons.wikimedia.org/wiki/File:Topless_female_model.jpg) — CC BY 2.0
+- other: [File:20231125 housecat south meadows PD100306.jpg](https://commons.wikimedia.org/wiki/File:20231125_housecat_south_meadows_PD100306.jpg) — CC BY-SA 4.0
+- other: [File:Calico cat, - Assisi, Italy.jpg](https://commons.wikimedia.org/wiki/File:Calico_cat,_-_Assisi,_Italy.jpg) — CC BY-SA 4.0
+- other: [File:Cat Iran.jpg](https://commons.wikimedia.org/wiki/File:Cat_Iran.jpg) — CC BY-SA 3.0
+- other: [File:Cat November 2010-1a.jpg](https://commons.wikimedia.org/wiki/File:Cat_November_2010-1a.jpg) — CC BY-SA 3.0
+- other: [File:Cat Sphynx. Kittens. img 11.jpg](https://commons.wikimedia.org/wiki/File:Cat_Sphynx._Kittens._img_11.jpg) — CC BY-SA 4.0
+- other: [File:Cat playing with a lizard.jpg](https://commons.wikimedia.org/wiki/File:Cat_playing_with_a_lizard.jpg) — CC BY-SA 4.0
+- other: [File:Domestic Cat Face Shot.jpg](https://commons.wikimedia.org/wiki/File:Domestic_Cat_Face_Shot.jpg) — CC BY-SA 3.0
+- other: [File:Domestic cat 2011 G02.jpg](https://commons.wikimedia.org/wiki/File:Domestic_cat_2011_G02.jpg) — Public domain
+- other: [File:Domestic cat 2019 G1.jpg](https://commons.wikimedia.org/wiki/File:Domestic_cat_2019_G1.jpg) — Public domain
+- other: [File:Domestic cat felis catus.jpg](https://commons.wikimedia.org/wiki/File:Domestic_cat_felis_catus.jpg) — GFDL
+- other: [File:Domestic cat felis catus stare.jpg](https://commons.wikimedia.org/wiki/File:Domestic_cat_felis_catus_stare.jpg) — GFDL
+- other: [File:Felis catus-cat on snow.jpg](https://commons.wikimedia.org/wiki/File:Felis_catus-cat_on_snow.jpg) — CC BY-SA 3.0
+- other: [File:June odd-eyed-cat cropped.jpg](https://commons.wikimedia.org/wiki/File:June_odd-eyed-cat_cropped.jpg) — CC BY 2.0
+- other: [File:Příchovice - old window and cat.jpg](https://commons.wikimedia.org/wiki/File:Příchovice_-_old_window_and_cat.jpg) — CC BY-SA 4.0
+- other: [File:Relaxed female domestic cat.jpg](https://commons.wikimedia.org/wiki/File:Relaxed_female_domestic_cat.jpg) — CC BY-SA 4.0
+- other: [File:Six weeks old cat (aka).jpg](https://commons.wikimedia.org/wiki/File:Six_weeks_old_cat_(aka).jpg) — CC BY-SA 2.5
+- other: [File:Sleeping cat on her back.jpg](https://commons.wikimedia.org/wiki/File:Sleeping_cat_on_her_back.jpg) — CC BY 2.0
+- other: [File:Tabby cat with blue eyes-3336579.jpg](https://commons.wikimedia.org/wiki/File:Tabby_cat_with_blue_eyes-3336579.jpg) — CC0
+- other: [File:Tabby cats of Ōizumi Ryokuchi Park, January 2019 - 8816.jpg](https://commons.wikimedia.org/wiki/File:Tabby_cats_of_Ōizumi_Ryokuchi_Park,_January_2019_-_8816.jpg) — CC BY-SA 4.0
+- other: [File:Tired 20-year-old cat.jpg](https://commons.wikimedia.org/wiki/File:Tired_20-year-old_cat.jpg) — CC BY 2.0 fr
+- other: [File:13-09-01-kochtreffen-wien-RalfR-02.jpg](https://commons.wikimedia.org/wiki/File:13-09-01-kochtreffen-wien-RalfR-02.jpg) — CC BY 3.0
+- other: [File:A Brazilian family in Rio de Janeiro by Jean-Baptiste Debret 1839.jpg](https://commons.wikimedia.org/wiki/File:A_Brazilian_family_in_Rio_de_Janeiro_by_Jean-Baptiste_Debret_1839.jpg) — Public domain
+- other: [File:A heap of shrimp shells on a plate in Tuntorp 1.jpg](https://commons.wikimedia.org/wiki/File:A_heap_of_shrimp_shells_on_a_plate_in_Tuntorp_1.jpg) — CC BY-SA 4.0
+- other: [File:Berliner Pfannkuchen 5.jpg](https://commons.wikimedia.org/wiki/File:Berliner_Pfannkuchen_5.jpg) — CC BY 4.0
+- other: [File:Chemical stain from masala on unwashed food plate after 1 day of consumption.jpg](https://commons.wikimedia.org/wiki/File:Chemical_stain_from_masala_on_unwashed_food_plate_after_1_day_of_consumption.jpg) — CC BY-SA 4.0
+- other: [File:Christmas table (Serbian cuisine).jpg](https://commons.wikimedia.org/wiki/File:Christmas_table_(Serbian_cuisine).jpg) — CC BY-SA 4.0
+- other: [File:Empty Food plate with minimal food wastage.jpg](https://commons.wikimedia.org/wiki/File:Empty_Food_plate_with_minimal_food_wastage.jpg) — CC BY-SA 3.0
+- other: [File:Food on a square plate (109515085).jpg](https://commons.wikimedia.org/wiki/File:Food_on_a_square_plate_(109515085).jpg) — CC BY 3.0
+- other: [File:Fried potatoes, Dried flowers, Food collage, Plate with food, Rostov-on-Don, Russia.jpg](https://commons.wikimedia.org/wiki/File:Fried_potatoes,_Dried_flowers,_Food_collage,_Plate_with_food,_Rostov-on-Don,_Russia.jpg) — CC BY 4.0
+- other: [File:Kehtna Kutsehariduskeskus 005-kokad pano.jpg](https://commons.wikimedia.org/wiki/File:Kehtna_Kutsehariduskeskus_005-kokad_pano.jpg) — CC BY-SA 4.0
+- other: [File:Kekse -- 2021 -- 9362.jpg](https://commons.wikimedia.org/wiki/File:Kekse_--_2021_--_9362.jpg) — CC BY-SA 4.0
+- other: [File:Lunch dish (pumpkin sauce, potatoes and chicken steak).jpg](https://commons.wikimedia.org/wiki/File:Lunch_dish_(pumpkin_sauce,_potatoes_and_chicken_steak).jpg) — CC BY-SA 4.0
+- other: [File:Parboiled rice with chicken, peppers, cucurbita, peas and tomato.jpg](https://commons.wikimedia.org/wiki/File:Parboiled_rice_with_chicken,_peppers,_cucurbita,_peas_and_tomato.jpg) — CC BY-SA 4.0
+- other: [File:Piece of chocolate cake on a white plate decorated with chocolate sauce.jpg](https://commons.wikimedia.org/wiki/File:Piece_of_chocolate_cake_on_a_white_plate_decorated_with_chocolate_sauce.jpg) — CC0
+- other: [File:Plate Poland 02.jpg](https://commons.wikimedia.org/wiki/File:Plate_Poland_02.jpg) — CC BY 4.0
+- other: [File:Plate of Vegetarian Meatballs.jpg](https://commons.wikimedia.org/wiki/File:Plate_of_Vegetarian_Meatballs.jpg) — CC BY 2.0
+- other: [File:Sandwich plate New Orleans 2017.jpg](https://commons.wikimedia.org/wiki/File:Sandwich_plate_New_Orleans_2017.jpg) — CC BY-SA 2.0
+- other: [File:Vegetarian Pizza.jpg](https://commons.wikimedia.org/wiki/File:Vegetarian_Pizza.jpg) — CC BY-SA 4.0
+- other: [File:Zakuski, Plate with food, Rostov-on-Don, Russia.jpg](https://commons.wikimedia.org/wiki/File:Zakuski,_Plate_with_food,_Rostov-on-Don,_Russia.jpg) — CC BY 4.0
+- other: [File:Corner and windows of Old Vaňkovka Factory at night in Brno, Brno-City District.jpg](https://commons.wikimedia.org/wiki/File:Corner_and_windows_of_Old_Vaňkovka_Factory_at_night_in_Brno,_Brno-City_District.jpg) — CC BY 3.0
+- other: [File:Cottage lit window at night in Nuthurst, West Sussex England.jpg](https://commons.wikimedia.org/wiki/File:Cottage_lit_window_at_night_in_Nuthurst,_West_Sussex_England.jpg) — CC BY-SA 4.0
+- other: [File:Four versions of a floodlight through rain on a window.jpg](https://commons.wikimedia.org/wiki/File:Four_versions_of_a_floodlight_through_rain_on_a_window.jpg) — CC BY-SA 4.0
+- other: [File:From window at night - panoramio.jpg](https://commons.wikimedia.org/wiki/File:From_window_at_night_-_panoramio.jpg) — CC BY-SA 3.0
+- other: [File:From window at night - panoramio (1).jpg](https://commons.wikimedia.org/wiki/File:From_window_at_night_-_panoramio_(1).jpg) — CC BY-SA 3.0
+- other: [File:Llghtened Windows at night in Paris.jpg](https://commons.wikimedia.org/wiki/File:Llghtened_Windows_at_night_in_Paris.jpg) — CC BY-SA 4.0
+- other: [File:Münster, Observantenkirche -- 2021 -- 9112.jpg](https://commons.wikimedia.org/wiki/File:Münster,_Observantenkirche_--_2021_--_9112.jpg) — CC BY-SA 4.0
+- other: [File:Night window - panoramio.jpg](https://commons.wikimedia.org/wiki/File:Night_window_-_panoramio.jpg) — CC BY 3.0
+- other: [File:Slush on window - night.jpg](https://commons.wikimedia.org/wiki/File:Slush_on_window_-_night.jpg) — CC BY-SA 4.0
+- other: [File:Slush on window in three lights.jpg](https://commons.wikimedia.org/wiki/File:Slush_on_window_in_three_lights.jpg) — CC BY-SA 4.0
+- other: [File:SonyCenterAtNight.jpg](https://commons.wikimedia.org/wiki/File:SonyCenterAtNight.jpg) — CC BY-SA 4.0
+- other: [File:Window Front at Night 374889.jpg](https://commons.wikimedia.org/wiki/File:Window_Front_at_Night_374889.jpg) — CC0
+- other: [File:Windows at night (34139793404).jpg](https://commons.wikimedia.org/wiki/File:Windows_at_night_(34139793404).jpg) — CC BY-SA 2.0
+- other: [File:Albert Bierstadt - Among the Sierra Nevada, California - Google Art Project.jpg](https://commons.wikimedia.org/wiki/File:Albert_Bierstadt_-_Among_the_Sierra_Nevada,_California_-_Google_Art_Project.jpg) — Public domain
+- other: [File:Gaston Haustraete - Painting in the Charlier Museum-2.jpg](https://commons.wikimedia.org/wiki/File:Gaston_Haustraete_-_Painting_in_the_Charlier_Museum-2.jpg) — Public domain
+- other: [File:Gaston Haustraete - Painting in the Charlier Museum.jpg](https://commons.wikimedia.org/wiki/File:Gaston_Haustraete_-_Painting_in_the_Charlier_Museum.jpg) — Public domain
+- other: [File:Henry Aston Barker Constantinople painting Istanbul Naval Museum 2024.jpg](https://commons.wikimedia.org/wiki/File:Henry_Aston_Barker_Constantinople_painting_Istanbul_Naval_Museum_2024.jpg) — Public domain
+- other: [File:Jean Gouweloos - Painting in the Charlier Museum.jpg](https://commons.wikimedia.org/wiki/File:Jean_Gouweloos_-_Painting_in_the_Charlier_Museum.jpg) — Public domain
+- other: [File:L. Crépin - Painting in the Charlier Museum.jpg](https://commons.wikimedia.org/wiki/File:L._Crépin_-_Painting_in_the_Charlier_Museum.jpg) — Public domain
+- other: [File:Laermans - Painting in the Charlier Museum.jpg](https://commons.wikimedia.org/wiki/File:Laermans_-_Painting_in_the_Charlier_Museum.jpg) — Public domain
+- other: [File:Léon Frédéric - Painting in the Charlier Museum.jpg](https://commons.wikimedia.org/wiki/File:Léon_Frédéric_-_Painting_in_the_Charlier_Museum.jpg) — Public domain
+- other: [File:Marketplace in the Netherlands - painting in the Museum Het Valkhof.jpg](https://commons.wikimedia.org/wiki/File:Marketplace_in_the_Netherlands_-_painting_in_the_Museum_Het_Valkhof.jpg) — CC BY-SA 4.0
+- other: [File:Painting by Henri Martin in Charlier Museum, Brussels.jpg](https://commons.wikimedia.org/wiki/File:Painting_by_Henri_Martin_in_Charlier_Museum,_Brussels.jpg) — Public domain
+- other: [File:The Red Kerchief, by Claude Monet, Cleveland Museum of Art, 1958.39.jpg](https://commons.wikimedia.org/wiki/File:The_Red_Kerchief,_by_Claude_Monet,_Cleveland_Museum_of_Art,_1958.39.jpg) — Public domain
+- other: [File:The triumph of french painting The apotheosis of Poussin, Le Sueur and Le Brune - Louvre.jpg](https://commons.wikimedia.org/wiki/File:The_triumph_of_french_painting_The_apotheosis_of_Poussin,_Le_Sueur_and_Le_Brune_-_Louvre.jpg) — CC BY-SA 4.0
+- other: [File:Two Poplars in the Alpilles near Saint-Rémy, by Vincent Van Gogh, Cleveland Museum of Art, 1958.32.jpg](https://commons.wikimedia.org/wiki/File:Two_Poplars_in_the_Alpilles_near_Saint-Rémy,_by_Vincent_Van_Gogh,_Cleveland_Museum_of_Art,_1958.32.jpg) — Public domain
+- other: [File:Unidentified painting in the MET - with frame.jpg](https://commons.wikimedia.org/wiki/File:Unidentified_painting_in_the_MET_-_with_frame.jpg) — Public domain
+- other: [File:Unidentified painting in the Museum Boijmans Boijmans Van Beuningen.jpg](https://commons.wikimedia.org/wiki/File:Unidentified_painting_in_the_Museum_Boijmans_Boijmans_Van_Beuningen.jpg) — Public domain
+- other: [File:Zittend naakt, Amedeo Modigliani, (1917), Koninklijk Museum voor Schone Kunsten Antwerpen, 2060.jpg](https://commons.wikimedia.org/wiki/File:Zittend_naakt,_Amedeo_Modigliani,_(1917),_Koninklijk_Museum_voor_Schone_Kunsten_Antwerpen,_2060.jpg) — Public domain
+- other: [File:Cromer, Reproduction poster on a shelter wall - geograph.org.uk - 7514418.jpg](https://commons.wikimedia.org/wiki/File:Cromer,_Reproduction_poster_on_a_shelter_wall_-_geograph.org.uk_-_7514418.jpg) — CC BY-SA 2.0
+- other: [File:Cromer, Reproduction poster on a shelter wall - geograph.org.uk - 7514435.jpg](https://commons.wikimedia.org/wiki/File:Cromer,_Reproduction_poster_on_a_shelter_wall_-_geograph.org.uk_-_7514435.jpg) — CC BY-SA 2.0
+- other: [File:Cromer, Reproduction poster on a shelter wall - geograph.org.uk - 7514437.jpg](https://commons.wikimedia.org/wiki/File:Cromer,_Reproduction_poster_on_a_shelter_wall_-_geograph.org.uk_-_7514437.jpg) — CC BY-SA 2.0
+- other: [File:What's behind the wall of Russian lies poster in Riga.jpg](https://commons.wikimedia.org/wiki/File:What's_behind_the_wall_of_Russian_lies_poster_in_Riga.jpg) — CC BY 4.0
+- other: [File:087 Red brick wall background, brick wall texture free photo with attribution.jpg](https://commons.wikimedia.org/wiki/File:087_Red_brick_wall_background,_brick_wall_texture_free_photo_with_attribution.jpg) — CC BY 3.0
+- other: [File:090 Brick wall texture free photo Creative Commons Attribution brick wall.jpg](https://commons.wikimedia.org/wiki/File:090_Brick_wall_texture_free_photo_Creative_Commons_Attribution_brick_wall.jpg) — CC BY 3.0
+- other: [File:Brick Wall Building.jpg](https://commons.wikimedia.org/wiki/File:Brick_Wall_Building.jpg) — CC0
+- other: [File:Brick wall Greenwood District Tulsa OK 2024-02-29 14-56-12.jpg](https://commons.wikimedia.org/wiki/File:Brick_wall_Greenwood_District_Tulsa_OK_2024-02-29_14-56-12.jpg) — CC BY 4.0
+- other: [File:Brick wall close-up view.jpg](https://commons.wikimedia.org/wiki/File:Brick_wall_close-up_view.jpg) — CC BY-SA 3.0
+- other: [File:Brick wall in Flemish bond.jpg](https://commons.wikimedia.org/wiki/File:Brick_wall_in_Flemish_bond.jpg) — CC BY 2.0
+- other: [File:Bricked-up window and ash tree shadows, Rövershagen, 2026-04-03.jpg](https://commons.wikimedia.org/wiki/File:Bricked-up_window_and_ash_tree_shadows,_Rövershagen,_2026-04-03.jpg) — CC BY-SA 4.0
+- other: [File:Common hop on former factory wall, Ursus (Warsaw), 2024-07-20.jpg](https://commons.wikimedia.org/wiki/File:Common_hop_on_former_factory_wall,_Ursus_(Warsaw),_2024-07-20.jpg) — CC BY-SA 4.0
+- other: [File:Exterior spherical lantern on a matte red painted brick facade in Seoul.jpg](https://commons.wikimedia.org/wiki/File:Exterior_spherical_lantern_on_a_matte_red_painted_brick_facade_in_Seoul.jpg) — CC BY-SA 4.0
+- other: [File:Heart graffiti on a brick wall.jpg](https://commons.wikimedia.org/wiki/File:Heart_graffiti_on_a_brick_wall.jpg) — CC BY-SA 4.0
+- other: [File:Heart graffiti on a brick wall grayscale.jpg](https://commons.wikimedia.org/wiki/File:Heart_graffiti_on_a_brick_wall_grayscale.jpg) — CC BY-SA 4.0
+- other: [File:Ivy Hedera Red Brick Wall 2892px.jpg](https://commons.wikimedia.org/wiki/File:Ivy_Hedera_Red_Brick_Wall_2892px.jpg) — GFDL 1.2
+- other: [File:Ivy Hedera Red Brick Wall Closeup 3008px.jpg](https://commons.wikimedia.org/wiki/File:Ivy_Hedera_Red_Brick_Wall_Closeup_3008px.jpg) — GFDL 1.2
+- other: [File:Moscow, ferns on a brick wall 05.jpg](https://commons.wikimedia.org/wiki/File:Moscow,_ferns_on_a_brick_wall_05.jpg) — CC0
+- other: [File:Moscow, ferns on a brick wall 07.jpg](https://commons.wikimedia.org/wiki/File:Moscow,_ferns_on_a_brick_wall_07.jpg) — CC0
+- other: [File:Siemianowice Węglowa 10a-b fence brick wall 2025.jpg](https://commons.wikimedia.org/wiki/File:Siemianowice_Węglowa_10a-b_fence_brick_wall_2025.jpg) — CC BY-SA 4.0
+- other: [File:Surfaces vertical brick wall closeup view.JPG](https://commons.wikimedia.org/wiki/File:Surfaces_vertical_brick_wall_closeup_view.JPG) — CC0
+- other: [File:Trained rose and shrub rose against brick wall in Boreham, Essex, England.jpg](https://commons.wikimedia.org/wiki/File:Trained_rose_and_shrub_rose_against_brick_wall_in_Boreham,_Essex,_England.jpg) — CC BY-SA 4.0
+- other: [File:Two blue water meters on a matte red painted brick facade with pipes in Seoul.jpg](https://commons.wikimedia.org/wiki/File:Two_blue_water_meters_on_a_matte_red_painted_brick_facade_with_pipes_in_Seoul.jpg) — CC BY-SA 4.0
+- other: [File:Ripon Cathedral Rood Screen, Nth Yorkshire, UK - Diliff.jpg](https://commons.wikimedia.org/wiki/File:Ripon_Cathedral_Rood_Screen,_Nth_Yorkshire,_UK_-_Diliff.jpg) — CC BY-SA 3.0
+- other: [File:All Saints church Edingthorpe Norfolk (2935689858).jpg](https://commons.wikimedia.org/wiki/File:All_Saints_church_Edingthorpe_Norfolk_(2935689858).jpg) — CC BY 2.0
+- other: [File:All Saints church Gimingham Norfolk (2951688326).jpg](https://commons.wikimedia.org/wiki/File:All_Saints_church_Gimingham_Norfolk_(2951688326).jpg) — CC BY 2.0
+- other: [File:All Saints church Hawstead Suffolk (3108665402).jpg](https://commons.wikimedia.org/wiki/File:All_Saints_church_Hawstead_Suffolk_(3108665402).jpg) — CC BY 2.0
+- other: [File:All Saints church Thornage Norfolk (3022036413).jpg](https://commons.wikimedia.org/wiki/File:All_Saints_church_Thornage_Norfolk_(3022036413).jpg) — CC BY 2.0
+- other: [File:Holy Trinity church Gisleham Suffolk (2972464169).jpg](https://commons.wikimedia.org/wiki/File:Holy_Trinity_church_Gisleham_Suffolk_(2972464169).jpg) — CC BY 2.0
+- other: [File:St Andrew's church Brinton Norfolk (2981368602).jpg](https://commons.wikimedia.org/wiki/File:St_Andrew's_church_Brinton_Norfolk_(2981368602).jpg) — CC BY 2.0
+- other: [File:St Mary's church East Bilney Norfolk (3065950506).jpg](https://commons.wikimedia.org/wiki/File:St_Mary's_church_East_Bilney_Norfolk_(3065950506).jpg) — CC BY 2.0
+- other: [File:St Mary's church East Ruston Norfolk (2933869395).jpg](https://commons.wikimedia.org/wiki/File:St_Mary's_church_East_Ruston_Norfolk_(2933869395).jpg) — CC BY 2.0
+- other: [File:St Mary's church North Elmham Norfolk (3265925446).jpg](https://commons.wikimedia.org/wiki/File:St_Mary's_church_North_Elmham_Norfolk_(3265925446).jpg) — CC BY 2.0
+- other: [File:St Peter's church Guestwick Norfolk (3333200434).jpg](https://commons.wikimedia.org/wiki/File:St_Peter's_church_Guestwick_Norfolk_(3333200434).jpg) — CC BY 2.0
+- other: [File:St Peter and St Paul's church Honing Norfolk (2933443218).jpg](https://commons.wikimedia.org/wiki/File:St_Peter_and_St_Paul's_church_Honing_Norfolk_(2933443218).jpg) — CC BY 2.0
+- other: [File:Night-time road resurfacing operation during Chatham Waterfront Bus Station improvement works showing Tarmac vehicles, workers, and road closure on Globe Lane, Chatham, Kent, England.jpg](https://commons.wikimedia.org/wiki/File:Night-time_road_resurfacing_operation_during_Chatham_Waterfront_Bus_Station_improvement_works_showing_Tarmac_vehicles,_workers,_and_road_closure_on_Globe_Lane,_Chatham,_Kent,_England.jpg) — CC BY-SA 4.0
+- other: [File:Night-time road resurfacing works during Chatham Waterfront Bus Station safety improvement project showing Tarmac tipper truck, excavator, and road closure barriers on Globe Lane, Chatham, Kent, England.jpg](https://commons.wikimedia.org/wiki/File:Night-time_road_resurfacing_works_during_Chatham_Waterfront_Bus_Station_safety_improvement_project_showing_Tarmac_tipper_truck,_excavator,_and_road_closure_barriers_on_Globe_Lane,_Chatham,_Kent,_England.jpg) — CC BY-SA 4.0
+- other: [File:Hardwick, St. Margaret's Church, The chancel showing the unadorned rear of the screen 1 - geograph.org.uk - 6039565.jpg](https://commons.wikimedia.org/wiki/File:Hardwick,_St._Margaret's_Church,_The_chancel_showing_the_unadorned_rear_of_the_screen_1_-_geograph.org.uk_-_6039565.jpg) — CC BY-SA 2.0
+- other: [File:Hardwick, St. Margaret's Church, The chancel showing the unadorned rear of the screen 2 - geograph.org.uk - 6039566.jpg](https://commons.wikimedia.org/wiki/File:Hardwick,_St._Margaret's_Church,_The_chancel_showing_the_unadorned_rear_of_the_screen_2_-_geograph.org.uk_-_6039566.jpg) — CC BY-SA 2.0
+- other: [File:View of a large screen showing the wheelchair tennis at Wimbledon reflected in the Regent's Canal - geograph.org.uk - 6894447.jpg](https://commons.wikimedia.org/wiki/File:View_of_a_large_screen_showing_the_wheelchair_tennis_at_Wimbledon_reflected_in_the_Regent's_Canal_-_geograph.org.uk_-_6894447.jpg) — CC BY-SA 2.0
+- other: [File:Walsoken, All Saints Church, North Aisle showing the Medieval Parclose Screen - geograph.org.uk - 4478668.jpg](https://commons.wikimedia.org/wiki/File:Walsoken,_All_Saints_Church,_North_Aisle_showing_the_Medieval_Parclose_Screen_-_geograph.org.uk_-_4478668.jpg) — CC BY-SA 2.0
+- other: [File:HK WCD 灣仔 Wan Chai 軒尼詩道 Hennessy Road shop household items August 2021 SS2 paper books Receipt forms.jpg](https://commons.wikimedia.org/wiki/File:HK_WCD_灣仔_Wan_Chai_軒尼詩道_Hennessy_Road_shop_household_items_August_2021_SS2_paper_books_Receipt_forms.jpg) — CC BY-SA 4.0
+- other: [File:004 2019 12 09 Bueromaterial.jpg](https://commons.wikimedia.org/wiki/File:004_2019_12_09_Bueromaterial.jpg) — CC BY-SA 4.0
+- other: [File:Bell telephone magazine (1947) (14570381847).jpg](https://commons.wikimedia.org/wiki/File:Bell_telephone_magazine_(1947)_(14570381847).jpg) — No restrictions
+- other: [File:Dülmen, Kirchspiel, ehem. Sondermunitionslager Visbeck, Beobachtungsturm der US Army -- 2022 -- 4448.jpg](https://commons.wikimedia.org/wiki/File:Dülmen,_Kirchspiel,_ehem._Sondermunitionslager_Visbeck,_Beobachtungsturm_der_US_Army_--_2022_--_4448.jpg) — CC BY-SA 4.0
+- other: [File:Dülmen, Kirchspiel, ehem. Sondermunitionslager Visbeck, Beobachtungsturm der US Army -- 2022 -- 4449.jpg](https://commons.wikimedia.org/wiki/File:Dülmen,_Kirchspiel,_ehem._Sondermunitionslager_Visbeck,_Beobachtungsturm_der_US_Army_--_2022_--_4449.jpg) — CC BY-SA 4.0
+- other: [File:Dülmen, Kirchspiel, ehem. Sondermunitionslager Visbeck, Beobachtungsturm der US Army -- 2022 -- 4457.jpg](https://commons.wikimedia.org/wiki/File:Dülmen,_Kirchspiel,_ehem._Sondermunitionslager_Visbeck,_Beobachtungsturm_der_US_Army_--_2022_--_4457.jpg) — CC BY-SA 4.0
+- other: [File:Dülmen, Kirchspiel, ehem. Sondermunitionslager Visbeck, Beobachtungsturm der US Army -- 2022 -- 4457 (bw).jpg](https://commons.wikimedia.org/wiki/File:Dülmen,_Kirchspiel,_ehem._Sondermunitionslager_Visbeck,_Beobachtungsturm_der_US_Army_--_2022_--_4457_(bw).jpg) — CC BY-SA 4.0
+- other: [File:Susukino festival. (3800962896).jpg](https://commons.wikimedia.org/wiki/File:Susukino_festival._(3800962896).jpg) — CC BY 2.0
+- other: [File:A) Paper cardstock collapsible cup, b) round coral colored paper cover with c) matching lid. Identical text printed on bottom of (7ae02d73-81b3-41b9-8f19-d956d0d96080).jpg](https://commons.wikimedia.org/wiki/File:A)_Paper_cardstock_collapsible_cup,_b)_round_coral_colored_paper_cover_with_c)_matching_lid._Identical_text_printed_on_bottom_of_(7ae02d73-81b3-41b9-8f19-d956d0d96080).jpg) — Public domain
+- other: [File:Lunar Year of Rabbit Water in Manila 01.jpg](https://commons.wikimedia.org/wiki/File:Lunar_Year_of_Rabbit_Water_in_Manila_01.jpg) — CC BY-SA 4.0
+- other: [File:Papierkanten -- 2020 -- 9535.jpg](https://commons.wikimedia.org/wiki/File:Papierkanten_--_2020_--_9535.jpg) — CC BY-SA 4.0
+- other: [File:Đốt tiền vàng cho tổ tiên trong Tết Trung Nguyên ở Hà Nội 02.jpg](https://commons.wikimedia.org/wiki/File:Đốt_tiền_vàng_cho_tổ_tiên_trong_Tết_Trung_Nguyên_ở_Hà_Nội_02.jpg) — CC BY-SA 4.0
+- other: [File:Đốt tiền vàng cho tổ tiên trong Tết Trung Nguyên ở Hà Nội 03.jpg](https://commons.wikimedia.org/wiki/File:Đốt_tiền_vàng_cho_tổ_tiên_trong_Tết_Trung_Nguyên_ở_Hà_Nội_03.jpg) — CC BY-SA 4.0
+- other: [File:Đốt tiền vàng cho tổ tiên trong Tết Trung Nguyên ở Hà Nội 04.jpg](https://commons.wikimedia.org/wiki/File:Đốt_tiền_vàng_cho_tổ_tiên_trong_Tết_Trung_Nguyên_ở_Hà_Nội_04.jpg) — CC BY-SA 4.0
+- other: [File:Đốt tiền vàng cho tổ tiên trong Tết Trung Nguyên ở Hà Nội 06.jpg](https://commons.wikimedia.org/wiki/File:Đốt_tiền_vàng_cho_tổ_tiên_trong_Tết_Trung_Nguyên_ở_Hà_Nội_06.jpg) — CC BY-SA 4.0
+- other: [File:Đốt tiền vàng cho tổ tiên trong Tết Trung Nguyên ở Hà Nội 07.jpg](https://commons.wikimedia.org/wiki/File:Đốt_tiền_vàng_cho_tổ_tiên_trong_Tết_Trung_Nguyên_ở_Hà_Nội_07.jpg) — CC BY-SA 4.0
+- other: [File:A&W Restaurant Menu.jpg](https://commons.wikimedia.org/wiki/File:A&W_Restaurant_Menu.jpg) — CC BY-SA 3.0
+- other: [File:Illuminated facade of a 3-storey restaurant with Japanese signs and red paper lanterns, Chiyoda, Tokyo.jpg](https://commons.wikimedia.org/wiki/File:Illuminated_facade_of_a_3-storey_restaurant_with_Japanese_signs_and_red_paper_lanterns,_Chiyoda,_Tokyo.jpg) — CC BY-SA 4.0

@@ -1,0 +1,129 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "28f7a182356b2c062d1a1ae2a8d41726",
+    "entities": [
+      {
+        "tableName": "processed",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`sourceId` INTEGER NOT NULL, `sourceUri` TEXT NOT NULL, `sourceName` TEXT NOT NULL, `outputUri` TEXT, `outputMime` TEXT, `imageClass` TEXT NOT NULL, `screenScore` REAL NOT NULL, `documentScore` REAL NOT NULL, `features` TEXT NOT NULL, `style` TEXT, `sourceBytes` INTEGER NOT NULL, `outputBytes` INTEGER NOT NULL, `outputWidth` INTEGER NOT NULL, `outputHeight` INTEGER NOT NULL, `durationMs` INTEGER NOT NULL, `processedAt` INTEGER NOT NULL, `origin` TEXT NOT NULL, `error` TEXT, PRIMARY KEY(`sourceId`))",
+        "fields": [
+          {
+            "fieldPath": "sourceId",
+            "columnName": "sourceId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sourceUri",
+            "columnName": "sourceUri",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sourceName",
+            "columnName": "sourceName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "outputUri",
+            "columnName": "outputUri",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "outputMime",
+            "columnName": "outputMime",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "imageClass",
+            "columnName": "imageClass",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "screenScore",
+            "columnName": "screenScore",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "documentScore",
+            "columnName": "documentScore",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "features",
+            "columnName": "features",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "style",
+            "columnName": "style",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "sourceBytes",
+            "columnName": "sourceBytes",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "outputBytes",
+            "columnName": "outputBytes",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "outputWidth",
+            "columnName": "outputWidth",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "outputHeight",
+            "columnName": "outputHeight",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "durationMs",
+            "columnName": "durationMs",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "processedAt",
+            "columnName": "processedAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "origin",
+            "columnName": "origin",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "error",
+            "columnName": "error",
+            "affinity": "TEXT"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "sourceId"
+          ]
+        }
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '28f7a182356b2c062d1a1ae2a8d41726')"
+    ]
+  }
+}

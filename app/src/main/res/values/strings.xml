@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ScreenScrub</string>
+    <string name="share_label">Clean &amp; share</string>
+    <string name="channel_name">Cleaned photos</string>
+    <string name="channel_description">Tells you when a screen or document photo has been cleaned.</string>
+</resources>

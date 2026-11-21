@@ -10,3 +10,4 @@ samples/**/*.jpg
 samples/**/*.jpeg
 samples/**/*.png
 samples/**/*.heic
+samples/features.csv

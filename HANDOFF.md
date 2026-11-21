@@ -14,6 +14,11 @@ Received photos (WhatsApp, Messages, email) are out of scope.
 ## Why it's worth building
 Scanner apps and Google Photos clean up documents, but only when you ask them to, one photo at a time. Moiré removers are mostly online AI services or only work while shooting. Nobody does **automatic, offline, non-AI cleanup** of screen and document photos. The automatic part is the product, so both screens and documents are in v1.
 
+## Scope change (2026-11-21)
+**Screens only.** Documents are dropped: Google Camera and many apps already handle them.
+Main use case: sharing what's on a TV or public monitor, which can't be screen-shared.
+Target output: looks like a native screenshot (straight, no bezel, no glare, reflections or moiré, true colours).
+
 ## Decisions
 | Topic | Decision |
 |---|---|

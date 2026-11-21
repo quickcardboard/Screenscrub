@@ -50,6 +50,79 @@ class MoireAnalyzer(
         return MoireResult(best, count, rects)
     }
 
+    /**
+     * Pixel-grid periodicity on a 3×3 grid of native-resolution tiles inside [region]:
+     * returns the median over tiles of the strongest peak excess in luminance and in
+     * red−blue chroma. Unlike moiré detection this includes the axes (a screen held
+     * straight puts its grid exactly on them) but still skips the JPEG 8×8 block grid.
+     */
+    fun gridPeriodicity(bgr: Mat, region: Rect): Pair<Double, Double> {
+        val r = clip(region, bgr.cols(), bgr.rows())
+        val n = tileSize
+        if (r.width < n || r.height < n) return 0.0 to 0.0
+        val lumas = ArrayList<Double>(); val chromas = ArrayList<Double>()
+        for (fy in doubleArrayOf(0.25, 0.5, 0.75)) for (fx in doubleArrayOf(0.25, 0.5, 0.75)) {
+            val x = ((r.x + fx * r.width - n / 2).roundToInt().coerceIn(r.x, r.x + r.width - n)) / 8 * 8
+            val y = ((r.y + fy * r.height - n / 2).roundToInt().coerceIn(r.y, r.y + r.height - n)) / 8 * 8
+            val tile = bgr.submat(Rect(x, y, n, n))
+            val f = Mat(); tile.convertTo(f, CvType.CV_32FC3); tile.release()
+            val ch = mutableListOf<Mat>(); Core.split(f, ch); f.release()
+            val luma = Mat()
+            Core.addWeighted(ch[2], 0.299, ch[1], 0.587, 0.0, luma)
+            Core.scaleAdd(ch[0], 0.114, luma, luma)
+            val chroma = Mat()
+            Core.subtract(ch[2], ch[0], chroma)
+            ch.forEach { it.release() }
+            lumas += maxExcess(luma); chromas += maxExcess(chroma)
+            luma.release(); chroma.release()
+        }
+        return median(lumas) to median(chromas)
+    }
+
+    private fun median(v: List<Double>) = v.sorted()[v.size / 2]
+
+    /** Strongest spectral peak of a float tile: ln(magnitude) minus the radial median. */
+    private fun maxExcess(tileF: Mat): Double {
+        val n = tileF.rows()
+        val mean = Core.mean(tileF).`val`[0]
+        val f = Mat()
+        Core.subtract(tileF, Scalar(mean), f)
+        val win = Mat()
+        Imgproc.createHanningWindow(win, Size(n.toDouble(), n.toDouble()), CvType.CV_32F)
+        Core.multiply(f, win, f); win.release()
+        val spec = Mat()
+        Core.dft(f, spec, Core.DFT_COMPLEX_OUTPUT); f.release()
+        val mag = magnitudes(spec, n); spec.release()
+        val minR = n / 21 // ≈24 for 512: ignore content's low frequencies
+        val layout = radialLayout(n, minR)
+        val values = FloatArray(layout.order.size)
+        for (k in layout.order.indices) values[k] = mag[layout.order[k]]
+        val block = n / 8
+        var best = 0.0
+        for (rad in minR..n / 2) {
+            val from = layout.start[rad]; val to = layout.start[rad + 1]
+            if (to - from < 8) continue
+            val seg = values.copyOfRange(from, to)
+            java.util.Arrays.sort(seg)
+            val med = seg[seg.size / 2]
+            for (k in from until to) {
+                val idx = layout.order[k]
+                val v = mag[idx] - med
+                if (v <= best) continue
+                val u = idx % n; val w = idx / n
+                val fx = if (u <= n / 2) u else u - n; val fy = if (w <= n / 2) w else w - n
+                if (nearMultiple(fx, block) && nearMultiple(fy, block)) continue
+                best = v.toDouble()
+            }
+        }
+        return best
+    }
+
+    private fun clip(r: Rect, w: Int, h: Int): Rect {
+        val x0 = r.x.coerceIn(0, w); val y0 = r.y.coerceIn(0, h)
+        return Rect(x0, y0, (r.x + r.width).coerceIn(0, w) - x0, (r.y + r.height).coerceIn(0, h) - y0)
+    }
+
     /** Log-magnitude spectrum of the first tile, shifted so DC is centred. For the debug screen. */
     fun spectrumImage(gray: Mat, region: Rect): Mat {
         val r = tileRects(gray, region, tileSize, 1).firstOrNull() ?: Rect(0, 0, min(gray.cols(), tileSize), min(gray.rows(), tileSize))

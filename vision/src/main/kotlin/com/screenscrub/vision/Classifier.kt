@@ -40,19 +40,14 @@ class Classifier(val config: ClassifierConfig = ClassifierConfig()) {
         else ImageOps.centralRect(fullGray.cols(), fullGray.rows(), 0.7)
         val moireResult = moire.analyze(fullGray, tileRegion)
         fullGray.release()
+        val (gridLuma, gridChroma) = moire.gridPeriodicity(full, tileRegion)
 
-        val features = measure(region, quadResult, moireResult)
+        val features = measure(region, quadResult, moireResult).copy(gridLuma = gridLuma, gridChroma = gridChroma)
         region.release(); small.release()
 
         val screen = screenScore(features, quadResult != null)
-        val doc = documentScore(features, quadResult != null)
-        val cls = when {
-            screen >= config.effectiveScreenThreshold && screen >= doc -> ImageClass.SCREEN
-            doc >= config.effectiveDocumentThreshold -> ImageClass.DOCUMENT
-            screen >= config.effectiveScreenThreshold -> ImageClass.SCREEN
-            else -> ImageClass.OTHER
-        }
-        return Classification(cls, screen, doc, features, fullQuad)
+        val cls = if (screen >= config.effectiveScreenThreshold) ImageClass.SCREEN else ImageClass.OTHER
+        return Classification(cls, screen, features, fullQuad)
     }
 
     internal fun measure(region: Mat, quad: QuadResult?, moire: MoireResult): Features {
@@ -126,13 +121,18 @@ class Classifier(val config: ClassifierConfig = ClassifierConfig()) {
     }
 
     /**
-     * Screen evidence. With a quad: contrast against the surround, a blue white point, a uniform
-     * bezel, moiré and saturated UI accents; at least one emissive cue is required. Without a
-     * quad (close-ups): only strong moiré plus an emissive cue counts.
+     * Screen evidence. With a quad (whole screen in view): contrast against the surround, a blue
+     * white point or glow, a uniform bezel, moiré or pixel grid, saturated UI accents; at least
+     * one screen-specific cue is required. Without a quad (close-ups): the pixel grid or moiré
+     * must be clearly present, helped by a blue white point or UI colours.
      * Weights were set against the sample set (see HANDOFF.md, "Tuning log").
      */
     fun screenScore(f: Features, hasQuad: Boolean): Double {
         val moire = ramp(f.moirePeak, config.moirePeakLogRatio + 0.5, config.moirePeakLogRatio + 2.5)
+        // The pixel grid is the main periodic cue; off-axis moiré alone also fires on blinds,
+        // slats and rugs, so it only adds a little on top of the grid.
+        val grid = ramp(f.gridLuma + f.gridChroma, 6.0, 7.0)
+        val periodic = min(1.0, grid + 0.15 * moire)
         val blue = ramp(f.blueShift, 0.02, 0.08)
         // Saturated UI accents; a frame that is saturated almost everywhere is a scene, not a UI.
         val emissive = ramp(f.colorfulFraction, 0.02, 0.15) * (1 - ramp(f.colorfulFraction, 0.5, 0.8))
@@ -142,14 +142,16 @@ class Classifier(val config: ClassifierConfig = ClassifierConfig()) {
             val contrast = ramp(abs(f.insideOutsideContrast), 0.05, 0.3)
             val bezel = bezel(f)
             val glow = glow(f)
-            var s = 0.30 * contrast + 0.30 * max(blue, glow) + 0.15 * moire + 0.10 * emissive + 0.25 * bezel
+            var s = 0.30 * contrast + 0.30 * max(blue, glow) + 0.15 * periodic + 0.10 * emissive + 0.25 * bezel
             s *= 0.7 + 0.3 * edges
             // A bright quad alone is not a screen (windows, posters): it needs a screen-specific cue.
-            if (maxOf(blue, moire, bezel, glow) < 0.3) s *= 0.6
+            if (maxOf(blue, periodic, bezel, glow) < 0.3) s *= 0.6
+            // A clearly warm white point (paper under room light) argues against a screen.
+            s *= 1 - 0.6 * ramp(-f.blueShift, 0.06, 0.12)
             s
         } else {
-            if (moire < 0.6 || max(blue, emissive) < 0.3) 0.0
-            else 0.9 * (0.6 * moire + 0.4 * max(blue, emissive))
+            if (periodic < 0.3) 0.0
+            else 0.7 * periodic + 0.3 * max(blue, emissive)
         }
     }
 
@@ -162,28 +164,6 @@ class Classifier(val config: ClassifierConfig = ClassifierConfig()) {
     /** Strong contrast with a uniform band right outside the quad: a monitor or laptop bezel. */
     private fun bezel(f: Features) =
         ramp(f.insideOutsideContrast, 0.3, 0.5) * (1 - ramp(f.ringStd, 0.08, 0.15))
-
-    /**
-     * Document evidence: smooth unsaturated paper relative to the image's own white, lines of
-     * text, low saturation, bright. Without a quad (page filling the frame) paper, low saturation
-     * and some text are all required. A blue white point or a bezel argue against paper.
-     */
-    fun documentScore(f: Features, hasQuad: Boolean): Double {
-        val paper = ramp(f.paperFraction, 0.15, 0.5)
-        val text = ramp(f.textScore, 0.05, 0.3)
-        val matte = 1.0 - ramp(f.meanSaturation, 0.12, 0.3)
-        val bright = ramp(f.medianLuma, 0.4, 0.6)
-        var s = if (hasQuad) {
-            val edges = ramp(f.quadEdgeSupport, 0.6, 0.9)
-            0.35 * paper + 0.20 * text + 0.20 * matte + 0.10 * bright + 0.15 * edges
-        } else {
-            if (f.paperFraction < 0.25 || f.meanSaturation > 0.18 || f.textScore < 0.12) return 0.0
-            0.9 * (0.40 * paper + 0.20 * text + 0.25 * matte + 0.15 * bright)
-        }
-        s *= 1 - 0.6 * ramp(f.blueShift, 0.02, 0.08)
-        if (hasQuad) s *= (1 - 0.5 * bezel(f)) * (1 - 0.6 * glow(f))
-        return s
-    }
 
     /** Pixels whose 7×7 neighbourhood has a standard deviation below ~6 grey levels. */
     private fun smoothMask(gray: Mat): Mat {

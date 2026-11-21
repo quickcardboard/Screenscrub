@@ -44,7 +44,7 @@ class ScreenScrub(val config: ClassifierConfig = ClassifierConfig()) {
             q.points.forEach { Imgproc.circle(small, it, t * 3, Scalar(0.0, 0.0, 255.0), -1) }
         }
         Imgproc.putText(
-            small, "${c.imageClass}  s=%.2f d=%.2f".format(c.screenScore, c.documentScore),
+            small, "${c.imageClass}  s=%.2f".format(c.screenScore),
             Point(10.0, 30.0), Imgproc.FONT_HERSHEY_SIMPLEX, 0.8, Scalar(0.0, 255.0, 255.0), 2,
         )
         return small

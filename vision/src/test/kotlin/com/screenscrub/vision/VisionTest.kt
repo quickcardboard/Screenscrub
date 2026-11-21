@@ -89,7 +89,7 @@ class VisionTest {
         val photo = Synthetic.screenPhoto()
         val meta = PhotoMeta(focalLength35mm = Synthetic.FOCAL_PX / Math.hypot(4000.0, 3000.0) * 43.27)
         val c = scrub.classify(photo, meta)
-        println("screen: ${c.imageClass} s=${c.screenScore} d=${c.documentScore} ${c.features}")
+        println("screen: ${c.imageClass} s=${c.screenScore} ${c.features}")
         assertEquals(ImageClass.SCREEN, c.imageClass)
         assertNotNull(c.quad)
         val out = scrub.clean(photo, c, OutputStyle.AUTO, meta)!!
@@ -102,25 +102,36 @@ class VisionTest {
 
     @Test fun darkModeScreenIsClassified() {
         val c = scrub.classify(Synthetic.screenPhoto(dark = true))
-        println("dark screen: ${c.imageClass} s=${c.screenScore} d=${c.documentScore} ${c.features}")
+        println("dark screen: ${c.imageClass} s=${c.screenScore} ${c.features}")
         assertEquals(ImageClass.SCREEN, c.imageClass)
     }
 
-    @Test fun documentPhotoIsClassifiedAndCleaned() {
-        val photo = Synthetic.documentPhoto()
-        val c = scrub.classify(photo)
-        println("document: ${c.imageClass} s=${c.screenScore} d=${c.documentScore} ${c.features}")
-        assertEquals(ImageClass.DOCUMENT, c.imageClass)
-        val out = scrub.clean(photo, c, OutputStyle.AUTO)!!
-        println("clean ${out.style} ${out.width}x${out.height} ${out.bytes.size / 1024} KB")
-        assertEquals(OutputStyle.BW, out.style)
-        assertTrue(out.height > out.width)
+    @Test fun documentPhotoIsNotAScreen() {
+        val c = scrub.classify(Synthetic.documentPhoto())
+        println("document: ${c.imageClass} s=${c.screenScore} ${c.features}")
+        assertEquals(ImageClass.OTHER, c.imageClass)
+    }
+
+    @Test fun closeUpIsStraightenedAndBezelCropped() {
+        // A UI filling the frame, rotated 6 degrees, with a dark bezel band along the bottom.
+        val ui = Synthetic.uiContent(3000, 2200)
+        // List separators and a card outline, as real UIs have.
+        for (y in 700 until 2200 step 140) org.opencv.imgproc.Imgproc.line(ui, Point(700.0, y.toDouble()), Point(2900.0, y.toDouble()), Scalar(200.0, 200.0, 200.0), 3)
+        org.opencv.imgproc.Imgproc.rectangle(ui, Rect(650, 500, 2300, 1650), Scalar(120.0, 120.0, 120.0), 4)
+        val photo = Mat(3000, 4000, CvType.CV_8UC3, Scalar(20.0, 20.0, 20.0))
+        val rot = org.opencv.imgproc.Imgproc.getRotationMatrix2D(Point(2000.0, 1300.0), 6.0, 1.25)
+        org.opencv.imgproc.Imgproc.warpAffine(ui, photo, rot, photo.size(), org.opencv.imgproc.Imgproc.INTER_LINEAR, Core.BORDER_TRANSPARENT)
+        Synthetic.cameraize(photo)
+        val r = ScreenRectifier().rectify(photo, 2600)
+        println("straightened=${r.straightened} cut=${r.cropped.toList()} size=${r.image.cols()}x${r.image.rows()}")
+        assertTrue(r.straightened)
+        assertTrue("bottom bezel not cropped", r.cropped[1] > 0)
     }
 
     @Test fun normalPhotoIsOther() {
         for (seed in 1..3) {
             val c = scrub.classify(Synthetic.normalPhoto(seed))
-            println("normal $seed: ${c.imageClass} s=${c.screenScore} d=${c.documentScore} ${c.features}")
+            println("normal $seed: ${c.imageClass} s=${c.screenScore} ${c.features}")
             assertEquals(ImageClass.OTHER, c.imageClass)
         }
     }

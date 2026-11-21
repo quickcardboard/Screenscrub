@@ -11,3 +11,5 @@ samples/**/*.jpeg
 samples/**/*.png
 samples/**/*.heic
 samples/features.csv
+samples/debug/
+samples_orig/

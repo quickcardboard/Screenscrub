@@ -6,6 +6,7 @@ import org.opencv.core.Mat
 import org.opencv.core.Rect
 import org.opencv.core.Scalar
 import org.opencv.imgproc.Imgproc
+import kotlin.math.abs
 import kotlin.math.max
 import kotlin.math.min
 import kotlin.math.roundToInt
@@ -79,8 +80,14 @@ class Classifier(val config: ClassifierConfig = ClassifierConfig()) {
         Core.inRange(region, Scalar(250.0, 250.0, 250.0), Scalar(255.0, 255.0, 255.0), clipped)
         val glare = Core.countNonZero(clipped) / total
 
+        // Paper: bright relative to the region's own white level, unsaturated, and smooth
+        // (low local variance), so snow, rock and foliage texture don't count.
+        val white = ImageOps.percentile8u(value, 0.95)
         val paperMask = Mat()
-        Core.inRange(hsv, Scalar(0.0, 0.0, 150.0), Scalar(180.0, 45.0, 255.0), paperMask)
+        Core.inRange(hsv, Scalar(0.0, 0.0, max(60.0, 0.72 * white)), Scalar(180.0, 45.0, 255.0), paperMask)
+        val smooth = smoothMask(gray)
+        Core.bitwise_and(paperMask, smooth, paperMask)
+        smooth.release()
         val paper = Core.countNonZero(paperMask) / total
 
         // White point: blue minus red of the bright, nearly neutral pixels (whites, not blue sky).
@@ -102,6 +109,8 @@ class Classifier(val config: ClassifierConfig = ClassifierConfig()) {
 
         return Features(
             quadAreaFraction = quad?.areaFraction ?: 0.0,
+            quadEdgeSupport = quad?.edgeSupport ?: 0.0,
+            ringStd = quad?.ringStd ?: 0.0,
             insideOutsideContrast = quad?.contrast ?: 0.0,
             moirePeak = moire.maxProminence,
             moirePeakCount = moire.peakCount,
@@ -116,42 +125,80 @@ class Classifier(val config: ClassifierConfig = ClassifierConfig()) {
         )
     }
 
+    /**
+     * Screen evidence. With a quad: contrast against the surround, a blue white point, a uniform
+     * bezel, moiré and saturated UI accents; at least one emissive cue is required. Without a
+     * quad (close-ups): only strong moiré plus an emissive cue counts.
+     * Weights were set against the sample set (see HANDOFF.md, "Tuning log").
+     */
     fun screenScore(f: Features, hasQuad: Boolean): Double {
-        val moire = ramp(f.moirePeak, config.moirePeakLogRatio, config.moirePeakLogRatio + 3)
-        val blue = ramp(f.blueShift, 0.0, 0.08)
-        val glare = ramp(f.glareFraction, 0.002, 0.03)
+        val moire = ramp(f.moirePeak, config.moirePeakLogRatio + 0.5, config.moirePeakLogRatio + 2.5)
+        val blue = ramp(f.blueShift, 0.02, 0.08)
         // Saturated UI accents; a frame that is saturated almost everywhere is a scene, not a UI.
         val emissive = ramp(f.colorfulFraction, 0.02, 0.15) * (1 - ramp(f.colorfulFraction, 0.5, 0.8))
         return if (hasQuad) {
+            val edges = ramp(f.quadEdgeSupport, 0.6, 0.9)
             // Either polarity: a bright screen in a dim room, or a dark-mode screen against a bright wall.
-            val contrast = ramp(kotlin.math.abs(f.insideOutsideContrast), 0.05, 0.3)
-            // A bright quad alone is not a screen (windows, posters): it needs one emissive cue.
-            val cue = max(moire, max(blue, 0.6 * emissive))
-            val s = 0.40 * moire + 0.25 * contrast + 0.20 * blue + 0.05 * glare + 0.10 * emissive
-            if (cue < 0.3) s * 0.5 else s
+            val contrast = ramp(abs(f.insideOutsideContrast), 0.05, 0.3)
+            val bezel = bezel(f)
+            val glow = glow(f)
+            var s = 0.30 * contrast + 0.30 * max(blue, glow) + 0.15 * moire + 0.10 * emissive + 0.25 * bezel
+            s *= 0.7 + 0.3 * edges
+            // A bright quad alone is not a screen (windows, posters): it needs a screen-specific cue.
+            if (maxOf(blue, moire, bezel, glow) < 0.3) s *= 0.6
+            s
         } else {
-            // Close-up with no visible edges: only strong moiré plus an emissive cue counts.
             if (moire < 0.6 || max(blue, emissive) < 0.3) 0.0
-            else 0.9 * (0.6 * moire + 0.25 * max(blue, emissive) + 0.15 * glare)
+            else 0.9 * (0.6 * moire + 0.4 * max(blue, emissive))
         }
     }
 
+    /**
+     * Much brighter than its surroundings. Paper only reflects room light, so it rarely
+     * outshines its surround by this much; a lit screen does.
+     */
+    private fun glow(f: Features) = ramp(f.insideOutsideContrast, 0.45, 0.6)
+
+    /** Strong contrast with a uniform band right outside the quad: a monitor or laptop bezel. */
+    private fun bezel(f: Features) =
+        ramp(f.insideOutsideContrast, 0.3, 0.5) * (1 - ramp(f.ringStd, 0.08, 0.15))
+
+    /**
+     * Document evidence: smooth unsaturated paper relative to the image's own white, lines of
+     * text, low saturation, bright. Without a quad (page filling the frame) paper, low saturation
+     * and some text are all required. A blue white point or a bezel argue against paper.
+     */
     fun documentScore(f: Features, hasQuad: Boolean): Double {
-        val paper = ramp(f.paperFraction, 0.35, 0.75)
-        val text = ramp(f.textScore, 0.15, 0.6)
-        val bimodal = ramp(f.bimodality, 0.55, 0.85)
-        val matte = 1.0 - ramp(f.meanSaturation, 0.12, 0.35)
-        var s = 0.30 * paper + 0.30 * text + 0.20 * bimodal + 0.20 * matte
-        if (!hasQuad) {
-            // Page filling the frame: allowed, but needs strong paper and text evidence.
-            if (paper < 0.6 || text < 0.5) return 0.0
-            s *= 0.9
+        val paper = ramp(f.paperFraction, 0.15, 0.5)
+        val text = ramp(f.textScore, 0.05, 0.3)
+        val matte = 1.0 - ramp(f.meanSaturation, 0.12, 0.3)
+        val bright = ramp(f.medianLuma, 0.4, 0.6)
+        var s = if (hasQuad) {
+            val edges = ramp(f.quadEdgeSupport, 0.6, 0.9)
+            0.35 * paper + 0.20 * text + 0.20 * matte + 0.10 * bright + 0.15 * edges
+        } else {
+            if (f.paperFraction < 0.25 || f.meanSaturation > 0.18 || f.textScore < 0.12) return 0.0
+            0.9 * (0.40 * paper + 0.20 * text + 0.25 * matte + 0.15 * bright)
         }
-        // Emissive evidence argues against paper.
-        val moire = ramp(f.moirePeak, config.moirePeakLogRatio, config.moirePeakLogRatio + 3)
-        if (moire > 0.5) s *= 0.5
-        if (f.blueShift > 0.08) s *= 0.7
+        s *= 1 - 0.6 * ramp(f.blueShift, 0.02, 0.08)
+        if (hasQuad) s *= (1 - 0.5 * bezel(f)) * (1 - 0.6 * glow(f))
         return s
+    }
+
+    /** Pixels whose 7×7 neighbourhood has a standard deviation below ~6 grey levels. */
+    private fun smoothMask(gray: Mat): Mat {
+        val f = ImageOps.toFloat(gray)
+        val mean = Mat(); val sq = Mat(); val meanSq = Mat()
+        Imgproc.blur(f, mean, org.opencv.core.Size(7.0, 7.0))
+        Core.multiply(f, f, sq)
+        Imgproc.blur(sq, meanSq, org.opencv.core.Size(7.0, 7.0))
+        Core.multiply(mean, mean, mean)
+        Core.subtract(meanSq, mean, meanSq) // variance
+        val mask = Mat()
+        Imgproc.threshold(meanSq, mask, 36.0, 255.0, Imgproc.THRESH_BINARY_INV)
+        mask.convertTo(mask, CvType.CV_8U)
+        listOf(f, mean, sq, meanSq).forEach { it.release() }
+        return mask
     }
 
     /** Scales channels so the brightest tenth of pixels averages neutral grey. */
@@ -173,7 +220,11 @@ class Classifier(val config: ClassifierConfig = ClassifierConfig()) {
         return out
     }
 
-    /** Text-like connected components per area, normalised so ~1 means a dense page. */
+    /**
+     * Text lines: character-sized dark components (after adaptive threshold) that have a
+     * right-hand neighbour of similar height on the same baseline. Normalised so ~1 means a
+     * dense page of text.
+     */
     private fun textScore(gray: Mat): Double {
         val bin = Mat()
         val block = ImageOps.odd(max(15, min(gray.cols(), gray.rows()) / 30))
@@ -185,19 +236,35 @@ class Classifier(val config: ClassifierConfig = ClassifierConfig()) {
         val cols = stats.cols()
         val short = min(gray.cols(), gray.rows()).toDouble()
         val minH = max(4.0, short * 0.006); val maxH = short * 0.06
-        var count = 0
+        val boxes = ArrayList<IntArray>()
         for (i in 1 until n) {
-            val w = s[i * cols + Imgproc.CC_STAT_WIDTH]
-            val h = s[i * cols + Imgproc.CC_STAT_HEIGHT]
+            val x = s[i * cols + Imgproc.CC_STAT_LEFT]; val y = s[i * cols + Imgproc.CC_STAT_TOP]
+            val w = s[i * cols + Imgproc.CC_STAT_WIDTH]; val h = s[i * cols + Imgproc.CC_STAT_HEIGHT]
             val a = s[i * cols + Imgproc.CC_STAT_AREA]
             if (h < minH || h > maxH || w > 3 * maxH || w < 1) continue
             val fill = a.toDouble() / (w * h)
             if (fill < 0.12 || fill > 0.9) continue
-            count++
+            boxes += intArrayOf(x, y, w, h)
         }
         listOf(bin, labels, stats, centroids).forEach { it.release() }
-        val per10k = count / (gray.total() / 10_000.0)
-        return (per10k / 20.0).coerceIn(0.0, 1.0)
+        // Sort by x so each box only scans a short window of candidates to its right.
+        boxes.sortBy { it[0] }
+        var chained = 0
+        for (i in boxes.indices) {
+            val b = boxes[i]
+            val right = b[0] + b[2]; val bottom = b[1] + b[3]
+            var j = i + 1
+            while (j < boxes.size && boxes[j][0] <= right + 1.5 * b[3]) {
+                val c = boxes[j]
+                val hr = c[3].toDouble() / b[3]
+                if (c[0] >= right - 0.2 * b[3] && hr in 0.6..1.6 &&
+                    abs((c[1] + c[3]) - bottom) < 0.25 * b[3]
+                ) { chained++; break }
+                j++
+            }
+        }
+        val per10k = chained / (gray.total() / 10_000.0)
+        return (per10k / 15.0).coerceIn(0.0, 1.0)
     }
 
     private fun otsuSeparation(hist: LongArray): Double {

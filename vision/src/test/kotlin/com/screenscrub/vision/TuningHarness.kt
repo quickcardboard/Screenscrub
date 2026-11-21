@@ -15,6 +15,8 @@ fun main(args: Array<String>) {
     val matrix = Array(3) { IntArray(3) }
     val csv = StringBuilder("file,expected,predicted,screenScore,docScore," + Features().asMap().keys.joinToString(",") + "\n")
     var total = 0
+    val debugDir = File(root, "debug")
+    debugDir.deleteRecursively()
     for ((i, pair) in classes.withIndex()) {
         val dir = File(root, pair.first)
         val files = dir.listFiles { f -> f.extension.lowercase() in setOf("jpg", "jpeg", "png") }?.sorted() ?: emptyList()
@@ -24,8 +26,15 @@ fun main(args: Array<String>) {
             val t0 = System.nanoTime()
             val c = scrub.classify(img)
             val ms = (System.nanoTime() - t0) / 1_000_000
-            img.release()
             val j = classes.indexOfFirst { it.second == c.imageClass }
+            if (i != j) {
+                // Overlay of every mistake, for a quick visual check of the detected quad.
+                debugDir.mkdirs()
+                val overlay = scrub.debugOverlay(img, c, 800)
+                Imgcodecs.imwrite(File(debugDir, "${pair.first}_as_${c.imageClass.name.lowercase()}_${f.nameWithoutExtension.take(40)}.jpg").absolutePath, overlay)
+                overlay.release()
+            }
+            img.release()
             matrix[i][j]++
             total++
             val mark = if (i == j) " " else "✗"

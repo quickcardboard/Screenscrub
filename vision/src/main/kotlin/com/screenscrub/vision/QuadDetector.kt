@@ -20,6 +20,14 @@ data class QuadResult(
     /** Mean luminance inside minus the surrounding ring, 0..1 scale. */
     val contrast: Double,
     val insideMean: Double,
+    /**
+     * Fraction of points along the sides that sit on a strong edge parallel to the side
+     * (mean of the best three sides, so one occluded side is tolerated). Real screens and pages
+     * have long straight edges; the hull of a random blob does not.
+     */
+    val edgeSupport: Double = 0.0,
+    /** Grey-level standard deviation of a thin band just outside the quad (0..1). A bezel is uniform. */
+    val ringStd: Double = 0.0,
 )
 
 /**
@@ -29,7 +37,42 @@ data class QuadResult(
  * and an Otsu bright-region mask. Rounded corners are handled by falling back to the
  * minimum-area rectangle when the contour fills it well.
  */
-class QuadDetector(private val minAreaFraction: Double = 0.15) {
+class QuadDetector(
+    private val minAreaFraction: Double = 0.15,
+    private val minEdgeSupport: Double = 0.55,
+) {
+
+    private class Gradients(val gx: FloatArray, val gy: FloatArray, val w: Int, val h: Int)
+
+    private fun edgeSupport(g: Gradients, q: Quad): Double {
+        val p = q.points
+        val perSide = DoubleArray(4) { i ->
+            val a = p[i]; val b = p[(i + 1) % 4]
+            val len = kotlin.math.hypot(b.x - a.x, b.y - a.y)
+            if (len < 10) return@DoubleArray 0.0
+            val nx = -(b.y - a.y) / len; val ny = (b.x - a.x) / len
+            val samples = 40
+            var hit = 0
+            for (k in 0 until samples) {
+                val t = 0.05 + 0.9 * k / (samples - 1)
+                val cx = a.x + (b.x - a.x) * t; val cy = a.y + (b.y - a.y) * t
+                var ok = false
+                for (d in -3..3) {
+                    val x = (cx + nx * d).toInt(); val y = (cy + ny * d).toInt()
+                    if (x < 1 || y < 1 || x >= g.w - 1 || y >= g.h - 1) continue
+                    val i2 = y * g.w + x
+                    val gxv = g.gx[i2]; val gyv = g.gy[i2]
+                    val mag = kotlin.math.sqrt(gxv * gxv + gyv * gyv)
+                    // Strong, and pointing across the side (an edge parallel to it).
+                    if (mag > 60f && abs(gxv * nx + gyv * ny) > 0.8 * mag) { ok = true; break }
+                }
+                if (ok) hit++
+            }
+            hit.toDouble() / samples
+        }
+        perSide.sortDescending()
+        return (perSide[0] + perSide[1] + perSide[2]) / 3
+    }
 
     fun detect(bgr: Mat): QuadResult? {
         val scored = candidates(bgr)
@@ -51,7 +94,7 @@ class QuadDetector(private val minAreaFraction: Double = 0.15) {
             val outer = best
             // The device-vs-surround contrast belongs to the bezel quad; keep it for scoring.
             inner.firstOrNull { bandContrast(gray, outer.quad, it.quad) > 0.04 }
-                ?.let { best = it.copy(contrast = outer.contrast) }
+                ?.let { best = it.copy(contrast = outer.contrast, ringStd = minOf(it.ringStd, outer.ringStd)) }
             gray.release()
         }
         return best
@@ -84,7 +127,13 @@ class QuadDetector(private val minAreaFraction: Double = 0.15) {
         collect(bin, Imgproc.RETR_EXTERNAL, imgArea, candidates)
         bin.release()
 
-        val scored = candidates.map { q -> measure(gray, q, imgArea) }
+        val gx = Mat(); val gy = Mat()
+        Imgproc.Sobel(gray, gx, CvType.CV_32F, 1, 0)
+        Imgproc.Sobel(gray, gy, CvType.CV_32F, 0, 1)
+        val grad = Gradients(ImageOps.floats(gx), ImageOps.floats(gy), gray.cols(), gray.rows())
+        gx.release(); gy.release()
+        val scored = candidates.map { q -> measure(gray, q, imgArea).let { r -> r.copy(edgeSupport = edgeSupport(grad, q)) } }
+            .filter { it.edgeSupport >= minEdgeSupport }
         gray.release()
         return scored
     }
@@ -165,7 +214,7 @@ class QuadDetector(private val minAreaFraction: Double = 0.15) {
         val w = (dist(p[0], p[1]) + dist(p[3], p[2])) / 2
         val h = (dist(p[0], p[3]) + dist(p[1], p[2])) / 2
         val ar = max(w, h) / max(1.0, min(w, h))
-        return ar < 4.0
+        return ar < 6.0 // long receipts
     }
 
     private fun measure(gray: Mat, q: Quad, imgArea: Double): QuadResult {
@@ -179,8 +228,16 @@ class QuadDetector(private val minAreaFraction: Double = 0.15) {
         val inside = Core.mean(gray, mask).`val`[0] / 255.0
         val ringPixels = Core.countNonZero(ring)
         val outside = if (ringPixels > 50) Core.mean(gray, ring).`val`[0] / 255.0 else inside
-        mask.release(); dil.release(); ring.release()
-        return QuadResult(q, q.area() / imgArea, inside - outside, inside)
+        // Thin band (≈1.5% of the frame) for the bezel uniformity measure.
+        val thinK = max(3, ImageOps.odd((max(gray.cols(), gray.rows()) * 0.015).toInt()))
+        val thin = Mat()
+        Imgproc.dilate(mask, thin, ImageOps.rect(thinK))
+        Core.subtract(thin, mask, thin)
+        val mean = org.opencv.core.MatOfDouble(); val std = org.opencv.core.MatOfDouble()
+        Core.meanStdDev(gray, mean, std, thin)
+        val ringStd = if (Core.countNonZero(thin) > 50) std.toArray()[0] / 255.0 else 1.0
+        listOf(mask, dil, ring, thin, mean, std).forEach { it.release() }
+        return QuadResult(q, q.area() / imgArea, inside - outside, inside, ringStd = ringStd)
     }
 
     /** |mean inside [inner] − mean of the band between [outer] and [inner]| (panel vs bezel), 0..1. */

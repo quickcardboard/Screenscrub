@@ -103,10 +103,23 @@ Weighted scores with configurable thresholds (`ClassifierConfig`), all features 
 1. ✅ Skeleton: modules, OpenCV on Android and JVM, Compose home, permissions.
 2. ✅ Vision v0: quad, moiré, classifier, enhancer, indexed-PNG encoder, synthetic-image tests.
 3. ✅ Manual mode, share target, detail/debug screen, auto mode, notifications, settings.
-4. **Next:** collect the real sample set; tune thresholds with `./gradlew :vision:tune` until the criteria pass.
+4. **In progress:** tuning. A first pass on 231 web photos gives 40% / 77% recall at 1.7% false positives (see Tuning log). Needs real phone photos to finish.
 5. Measure trigger latency on real devices (Pixel, Samsung, one budget phone).
 6. Manual corner adjustment, quads with corners outside the frame, line-segment quad detector.
 7. Later: batch-process the existing library, video frames, iOS share-extension port.
+
+## Tuning log
+**2026-11-21: first real-photo run** (231 Wikimedia Commons photos: 20 screens, 30 documents, 181 normal incl. framed paintings, posters, night windows, brick, snow). Commons served them resized to 1280–2560 px, which erases most moiré.
+
+| | Screen | Document | Other | Recall |
+|---|---|---|---|---|
+| Screen | 8 | 1 | 11 | **40%** |
+| Document | 0 | 23 | 7 | **77%** |
+| Other | 0 | 3 | 178 | 1.7% false positives |
+
+What changed to get here (from 0% / 63% / 18% FP): quad edge support, text-*line* feature, paper relative to the image's own white and required to be smooth, bezel uniformity, "glow" (much brighter than surround), blue white point as the screen-vs-paper tiebreak.
+
+**Below target.** Most remaining screen misses are photos where the screen shows a picture and there is no moiré left (looks like a framed print), close-ups with no visible edges, and dark screens in bright rooms. The test set is also not representative: product shots, not phone photos of screen content. **Next step: tune on real, unresized phone photos** — the case moiré detection was designed for.
 
 ## Known risks
 - Moiré is weakened by modern phone image processing and mimicked by fabric, blinds and brick. It is one vote, not the decision.

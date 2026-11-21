@@ -62,6 +62,10 @@ data class Quad(val tl: Point, val tr: Point, val br: Point, val bl: Point) {
 /** Every feature the classifier computed. Values are roughly 0..1 unless noted. */
 data class Features(
     val quadAreaFraction: Double = 0.0,
+    /** How well image edges support the quad's sides (0..1). */
+    val quadEdgeSupport: Double = 0.0,
+    /** Uniformity of the band just outside the quad: grey std (0..1); low for a bezel. */
+    val ringStd: Double = 0.0,
     /** Mean luminance inside the quad minus the surrounding ring (0..1 scale). */
     val insideOutsideContrast: Double = 0.0,
     /** Strongest moiré peak: ln(peak / radial median). e^3 ≈ 20× above the baseline. */
@@ -77,7 +81,10 @@ data class Features(
     val glareFraction: Double = 0.0,
     /** Otsu between-class / total variance (0..1). */
     val bimodality: Double = 0.0,
-    /** Text-like connected components per megapixel of the analysis region, normalised 0..1. */
+    /**
+     * Text lines: density of character-like components that have a neighbour of similar height
+     * on the same baseline, normalised 0..1. Random texture rarely forms such chains.
+     */
     val textScore: Double = 0.0,
     /** Fraction of the region that is "paper white" (bright, unsaturated). */
     val paperFraction: Double = 0.0,
@@ -86,6 +93,8 @@ data class Features(
 ) {
     fun asMap(): Map<String, Double> = linkedMapOf(
         "quadArea" to quadAreaFraction,
+        "quadEdges" to quadEdgeSupport,
+        "ringStd" to ringStd,
         "contrast" to insideOutsideContrast,
         "moirePeak" to moirePeak,
         "moirePeaks" to moirePeakCount.toDouble(),
@@ -119,7 +128,7 @@ data class ClassifierConfig(
     val moireTiles: Int = 4,
     /** A moiré peak must exceed the radial median magnitude by e^this (3.0 ≈ 20×). */
     val moirePeakLogRatio: Double = 3.0,
-    val screenThreshold: Double = 0.55,
+    val screenThreshold: Double = 0.45,
     val documentThreshold: Double = 0.55,
     /** -1 (strict) .. +1 (eager). Lowers or raises both thresholds by up to 0.15. */
     val sensitivity: Double = 0.0,

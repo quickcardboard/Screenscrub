@@ -1,0 +1,12 @@
+.gradle/
+build/
+local.properties
+.idea/
+*.iml
+.kotlin/
+captures/
+# Personal sample photos stay local
+samples/**/*.jpg
+samples/**/*.jpeg
+samples/**/*.png
+samples/**/*.heic

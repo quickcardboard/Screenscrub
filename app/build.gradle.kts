@@ -17,7 +17,9 @@ android {
         versionName = "0.1.0"
         ndk {
             // OpenCV ships native libraries per ABI; keep phones plus x86_64 for the emulator.
-            abiFilters += listOf("arm64-v8a", "armeabi-v7a", "x86_64")
+            // -Pabi=arm64-v8a builds a much smaller APK for modern phones only.
+            val only = (project.findProperty("abi") as String?)
+            abiFilters += only?.split(",") ?: listOf("arm64-v8a", "armeabi-v7a", "x86_64")
         }
     }
 

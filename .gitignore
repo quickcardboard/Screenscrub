@@ -13,3 +13,4 @@ samples/**/*.heic
 samples/features.csv
 samples/debug/
 samples_orig/
+dist/
